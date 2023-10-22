@@ -1,0 +1,14 @@
+{
+  "Header": {
+    "contrast": "Alto contraste",
+    "increaseFont": "A+",
+    "decreaseFont": "A-",
+    "selectLanguage": "Idioma",
+    "english": "en",
+    "portuguese": "pt",
+    "findYourGames": "Encontre seu jogo",
+    "accessibility": {
+      "logo": ""
+    }
+  }
+}
