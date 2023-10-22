@@ -1,0 +1,16 @@
+:root {
+  --font-size: 16px; /* Defina o tamanho de fonte padrão aqui */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  transition: all 0.18s ease-in-out;
+}
+
+body {
+  @apply bg-[#101010] text-[#333333];
+  font-size: var(--font-size);
+}
