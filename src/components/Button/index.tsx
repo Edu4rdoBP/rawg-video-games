@@ -1,5 +1,5 @@
 import { IButtonProps } from '@/@types/Button';
-import * as S from '@/styles/button';
+import * as S from '@/styles/components/Button';
 
 export default function Button({ children, onClick, type }: IButtonProps) {
   const allButtons: { [key: string]: JSX.Element } = {
