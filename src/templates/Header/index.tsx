@@ -23,7 +23,7 @@ export default function Header({ type }: IHeaderProps) {
     default: <CollapseHeader {...headerProps} />,
     home: (
       <>
-        <AccessibleHeader /> <StaticHeader {...headerProps} />
+        <AccessibleHeader t={t} /> <StaticHeader {...headerProps} />
       </>
     ),
   };

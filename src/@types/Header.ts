@@ -1,8 +1,9 @@
+import { ITranslateProps } from "./Globals";
+
 export interface IHeaderProps {
   type?: 'home' | 'default';
 }
 
-export interface IHeadersLayoutProps {
-  onClick: (argument?: any) => void;
-  t: (key: string) => string;
+export interface IHeadersLayoutProps extends ITranslateProps {
+  onClick?: (argument?: any) => void;
 }
