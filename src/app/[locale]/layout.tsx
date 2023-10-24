@@ -1,20 +1,24 @@
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import { NextIntlClientProvider } from 'next-intl';
-import { GlobalContextProvider } from '@/contexts/store';
+import { GlobalContextProvider } from '@/contexts/Font';
 import Header from '@/templates/Header';
+import { lato, poppins } from '@/fonts';
+import { ThemeProvider } from '@/contexts/Theme';
+import { ITheme } from '@/@types/Theme';
+import Footer from '@/templates/Footer';
+
 
 interface LocaleLayoutProps {
   children: ReactNode;
   params: {
     locale: string;
+    theme: ITheme
   };
 }
 
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -34,15 +38,18 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
-        <GlobalContextProvider>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <header>
-              <Header type='home' />
-            </header>
-            <main>{children}</main>
-          </NextIntlClientProvider>
-        </GlobalContextProvider>
+      <body className={`${lato.variable} ${poppins.variable} wrapper`}>
+        <ThemeProvider>
+          <GlobalContextProvider>
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              <header>
+                <Header type='home' />
+              </header>
+              <main>{children}</main>
+              <footer><Footer /></footer>
+            </NextIntlClientProvider>
+          </GlobalContextProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
