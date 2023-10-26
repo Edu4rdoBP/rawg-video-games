@@ -1,13 +1,13 @@
-import { IAccessibleItemsStyled } from "@/@types/AccessibleItems";
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const AccessibleItems = styled.div<IAccessibleItemsStyled>`
+export const AccessibleItems = styled.div`
   display: flex;
   justify-content: certer;
   align-items: center;
-  flex-direction: ${({ flexDirection }) => flexDirection || 'row'};
+  flex-direction: row;
   gap: 5px;
-  div, button {
+  div,
+  button {
     gap: 5px;
     display: flex;
     align-items: center;
@@ -18,4 +18,4 @@ export const AccessibleItems = styled.div<IAccessibleItemsStyled>`
   button:hover {
     background-color: rgba(255, 255, 255, 0.15);
   }
-`
+`;

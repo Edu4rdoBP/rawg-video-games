@@ -1,11 +1,11 @@
-"use client"
+'use client';
 
-import * as S from '@/styles/components/Select';
-import { ChangeEvent } from 'react';
-import { ISelectProps } from '@/@types/Select';
-import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
+import { ChangeEvent } from 'react';
 
+import * as S from './style';
+import { ISelectProps } from './type';
 
 export default function Select({ type, data, defaultData }: ISelectProps) {
   const router = useRouter();
@@ -15,9 +15,9 @@ export default function Select({ type, data, defaultData }: ISelectProps) {
     const selectedValue = event.target.value;
 
     if (type === 'selectLanguage') {
-      router.push(selectedValue)
+      router.push(selectedValue);
     }
-  }
+  };
   return (
     <S.Select onChange={handleChange} defaultValue={defaultData}>
       {data.map(({ value, label }, index) => {

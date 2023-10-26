@@ -1,32 +1,21 @@
 'use client';
+import Link from 'next/link';
 
-import { useTranslations } from 'next-intl';
-import CollapseHeader from './CollpseHeader';
-import { useRouter } from 'next/navigation';
-import { IHeaderProps } from '@/@types/Header';
-import AccessibleHeader from './AccessibleHeader';
-import StaticHeader from './StaticHeader';
+import * as S from './style';
 
-export default function Header({ type }: IHeaderProps) {
-  const t = useTranslations('Header');
-  const { push } = useRouter();
-  const pushToHome = () => {
-    push('/');
-  };
+import { Logo } from '@/components/Logo';
+import { SearchBar } from '@/components/SearchBar';
+import { Avatar } from '@/components/Avatar';
 
-  const headerProps = {
-    onClick: pushToHome,
-    t: t,
-  };
+export function Header() {
+  return (
+    <S.Wrapper>
+      <Link href='/'>
+        <Logo />
+      </Link>
 
-  const allHeaders: { [key: string]: JSX.Element } = {
-    default: <CollapseHeader {...headerProps} />,
-    home: (
-      <>
-        <AccessibleHeader t={t} /> <StaticHeader {...headerProps} />
-      </>
-    ),
-  };
-
-  return <>{type ? allHeaders[type] : allHeaders['default']}</>;
+      <SearchBar />
+      <Avatar />
+    </S.Wrapper>
+  );
 }
