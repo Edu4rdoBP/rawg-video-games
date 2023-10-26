@@ -1,12 +1,12 @@
 'use client';
 
-import { defaultTheme } from '@/styles/theme';
 import {
   createContext,
   useContext,
   Dispatch,
   SetStateAction,
   useState,
+  ReactNode,
 } from 'react';
 
 interface ContextProps {
@@ -15,17 +15,17 @@ interface ContextProps {
 }
 
 interface ActionsProviderProps {
-  children: any;
+  children: ReactNode;
 }
 
 const GlobalContext = createContext<ContextProps>({
   fontSize: 16,
-  setFontSize: () => { },
+  setFontSize: () => {},
 });
 
 export const GlobalContextProvider: React.FC<ActionsProviderProps> = ({
   children,
-}) => {
+}: ActionsProviderProps) => {
   const [fontSize, setFontSize] = useState<number>(16);
 
   return (
