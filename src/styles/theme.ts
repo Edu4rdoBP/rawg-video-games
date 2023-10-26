@@ -1,13 +1,11 @@
-import { ITheme } from "@/@types/Theme";
+import { ITheme } from '@/@types/Theme';
 
 export const defaultTheme: ITheme = {
-    primary: '#F6F6F6',
-    text: '#101010',
-    dark: '#030923',
+  primary: '#712FFF',
+  secondary: '#030303',
 };
 
 export const contrastTheme: ITheme = {
-    primary: '#030923',
-    text: '#FAFAFA',
-    dark: '#101010',
+  primary: '#030923',
+  secondary: '#030303',
 };

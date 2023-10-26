@@ -1,3 +1,3 @@
 export interface ITranslateProps {
-    t: (key: string) => string;
+  t: (key: string) => string;
 }

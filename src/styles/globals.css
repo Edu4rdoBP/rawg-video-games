@@ -6,43 +6,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 * {
   transition: all 0.03s ease-in-out;
 }
 
-body,
-html {
-  height: 100%;
-  margin: 0;
-}
-
 body {
-  @apply bg-[#F6F6F6];
   font-family: var(--font-lato);
   font-size: var(--font-size);
-}
-
-.wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-main,
-header {
-  max-width: 1200px;
+  color: white;
+  background-color: black;
+  padding: 50px 0;
 }
 
 main {
-  margin: auto;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100vw;
+  overflow: hidden;
 }
 
-footer {
-  margin-top: auto;
+main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../public/img/background2.jpg'); /* Substitua pelo caminho da sua imagem */
+  z-index: 1; /* Certifique-se de que a imagem com efeito sepia fique sobreposta à camada roxa */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
 }
 
+main::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 0, 49, 0.5); /* Cor roxa com opacidade */
+  backdrop-filter: sepia(9) brightness(0.3); /* Aplica o efeito de desfoque */
+  z-index: 2; /* Garante que a camada roxa fique sobreposta à imagem com efeito sepia */
+}
 
 h1,
 h2,

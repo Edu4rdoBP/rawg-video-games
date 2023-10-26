@@ -1,8 +1,8 @@
 'use client';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 import { ITheme } from '@/@types/Theme';
 import { defaultTheme, contrastTheme } from '@/styles/theme';
-import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface ThemeContextType {
   theme: ITheme;
@@ -19,7 +19,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<ITheme>(defaultTheme);
 
   const toggleTheme = () => {
-    setTheme((prevTheme: ITheme) => (prevTheme === contrastTheme ? defaultTheme : contrastTheme));
+    setTheme((prevTheme: ITheme) =>
+      prevTheme === contrastTheme ? defaultTheme : contrastTheme,
+    );
   };
 
   return (

@@ -1,10 +1,9 @@
 export interface ITheme {
-    primary: string;
-    text: string;
-    dark: string;
+  primary: string;
+  secondary: string;
 }
 
 export interface IThemeContextType {
-    theme: ITheme;
-    toggleTheme: () => void;
+  theme: ITheme;
+  toggleTheme: () => void;
 }
