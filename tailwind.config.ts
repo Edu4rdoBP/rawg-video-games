@@ -12,8 +12,9 @@ const config: Config = {
     extend: {
       fontFamily: {
         // 👇 Add CSS variables
-        poppins: ["var(--font-poppins)"],
-        lato: ["var(--font-lato)"],
+        poppins: ['var(--font-poppins)'],
+        lato: ['var(--font-lato)'],
+        montserrat: ['var(--font-montserrat)'],
       },
     },
   },
