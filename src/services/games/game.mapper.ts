@@ -17,7 +17,8 @@ export class GameHelper {
         metacritic: item.metacritic,
         updated: item.updated,
         platforms: item.platforms,
-        count: count
+        count: count,
+        genres: item.genres,
       });
     });
     return result;
@@ -41,6 +42,7 @@ export class GameHelper {
       metacritic: input.metacritic,
       updated: input.updated,
       platforms: input.platforms,
+      genres: input.genres
     };
   }
 }

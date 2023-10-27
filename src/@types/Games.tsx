@@ -1,16 +1,24 @@
-interface Requirements {
+interface IRequirements {
   minimum: string;
   recommended: string;
 }
 
-export interface PlatformInfo {
+export interface IGenres {
+  id: number;
+  name: string;
+  slug: string;
+  games_count: number;
+  image_background: string;
+}
+
+export interface IPlatformInfo {
   platform: {
     id: number;
     slug: string;
     name: string;
   };
   released_at: string;
-  requirements: Requirements;
+  requirements: IRequirements;
 }
 export interface IMetacriticPlatform {
   metascore: number;
@@ -57,8 +65,9 @@ export interface IGameInfo {
   background_image: string;
   metacritic: number;
   updated: string;
-  platforms: PlatformInfo[];
+  platforms: IPlatformInfo[];
   count?: number;
+  genres: IGenres[];
 }
 
 export interface IGameDetails extends IGameInfo {

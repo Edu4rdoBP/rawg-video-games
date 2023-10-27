@@ -1,4 +1,4 @@
-import { IMetacriticPlatform, PlatformInfo } from '@/@types/Games';
+import { IGenres, IMetacriticPlatform, IPlatformInfo } from '@/@types/Games';
 
 interface ESRBRating {
   id: number;
@@ -25,7 +25,8 @@ interface IGameInfoResponse {
   suggestions_count: number;
   updated: string;
   esrb_rating: ESRBRating;
-  platforms: PlatformInfo[];
+  platforms: IPlatformInfo[];
+  genres: IGenres[]
 }
 
 export interface IGeneralInfo {
