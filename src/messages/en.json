@@ -9,6 +9,9 @@
     "findYourGames": "Find your game",
     "accessibility": {
       "logo": ""
+    },
+    "searchBar": {
+      "noGameFound": "No titles found"
     }
   }
 }

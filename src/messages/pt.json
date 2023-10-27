@@ -9,6 +9,9 @@
     "findYourGames": "Encontre seu jogo",
     "accessibility": {
       "logo": ""
+    },
+    "searchBar": {
+      "noGameFound": "Nenhum título encontrado"
     }
   }
 }

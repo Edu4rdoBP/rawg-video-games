@@ -55,6 +55,26 @@ export const ListViewWrapper = styled.div(
   border-radius: 0 0 15px 15px;
   padding: 15px;
 
+
+ .games-search-list-view {
+     max-height: 190px;
+     overflow-y: scroll;
+     &::-webkit-scrollbar {
+         width: 8px;
+    }
+     &::-webkit-scrollbar-track {
+         border-radius: 8px;
+         background-color: none;
+         border: none;
+         box-shadow: none;
+    }
+     &::-webkit-scrollbar-thumb {
+         border-radius: 8px;
+         background-color: ${theme.textMuted}
+        ;
+    }
+}
+
   .game-list-item {
     padding: 4px 10px;
     cursor: pointer;

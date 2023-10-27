@@ -6,12 +6,12 @@ export default function Skeleton({ type }: ISkeletonProps) {
   const allSkeleton: { [key: string]: JSX.Element } = {
     searchBarItem: (
       <ul>
-        {[...Array(4)].map((movie, index) => (
+        {[...Array(5)].map((movie, index) => (
           <li
             key={index}
-            className='relative animate-pulse flex flex-row py-1 gap-2'
+            className='relative animate-pulse flex flex-row py-1 px-[10px] gap-2'
           >
-            <div className='aspect-square h-[30px] w-[60px] overflow-hidden rounded-lg bg-gray-300'></div>
+            <div className='aspect-square h-[30px] w-[60px] overflow-hidden  bg-gray-300'></div>
             <p className='mt-2 block h-4 w-[80%] rounded-lg bg-gray-600 text-sm font-medium'></p>
           </li>
         ))}

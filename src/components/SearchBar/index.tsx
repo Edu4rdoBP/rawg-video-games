@@ -4,10 +4,12 @@ import * as S from './style';
 import { useRef, useState } from 'react';
 import { useGameList } from '@/hooks/useGameList';
 import { ListView } from './listView';
+import { useTranslations } from 'next-intl';
 
 export function SearchBar() {
   const [query, setQuery] = useState<string>('');
   const [focus, setFocus] = useState<boolean>(false);
+  const t = useTranslations('Header.searchBar');
   const { fetchGames, gameList, loading } = useGameList();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -15,7 +17,7 @@ export function SearchBar() {
     fetchGames({ search: query });
   };
 
-  const timerRef = useRef<NodeJS.Timeout | null>(setTimeout(() => { }, 0));
+  const timerRef = useRef<NodeJS.Timeout | null>(setTimeout(() => {}, 0));
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
@@ -50,7 +52,7 @@ export function SearchBar() {
           }}
         />
       </S.Form>
-      {focus && <ListView loading={loading} games={gameList} />}
+      {focus && <ListView t={t} loading={loading} games={gameList} />}
     </S.Wrapper>
   );
 }
