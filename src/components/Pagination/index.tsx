@@ -41,10 +41,10 @@ export function Pagination({ data, fetchData, loading, children }: IPaginationPr
     <div>
       <select>{selectValues.map((item) => {
         return (
-          <option value={item}></option>
+          <option key={`select-item-per-page${item}`} value={item}></option>
         )
       })}</select>
-      {children}
+      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>{children}</div>
       <ReactPaginate
         pageCount={pageCount}
         pageRangeDisplayed={5}

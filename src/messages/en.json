@@ -13,5 +13,8 @@
     "searchBar": {
       "noGameFound": "No titles found"
     }
+  },
+  "Game": {
+    "altImage": "Game cover image {name}"
   }
 }
