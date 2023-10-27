@@ -1,6 +1,5 @@
 :root {
   --font-size: 16px;
-  /* Defina o tamanho de fonte padrão aqui */
 }
 
 @tailwind base;
@@ -15,41 +14,36 @@ body {
   font-size: var(--font-size);
   color: white;
   background-color: black;
+  background-image: url('../../public/img/background2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
   padding: 50px 0;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(58, 24, 130);
+  background: linear-gradient(
+    180deg,
+    rgba(58, 24, 130, 0.5) 1%,
+    rgba(0, 0, 0, 0.8) 86%
+  );
+  backdrop-filter: sepia(9) brightness(0.3);
+  z-index: -1;
 }
 
 main {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: 100vw;
+  height: 500px;
   overflow: hidden;
-}
-
-main::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../../public/img/background2.jpg'); /* Substitua pelo caminho da sua imagem */
-  z-index: 1; /* Certifique-se de que a imagem com efeito sepia fique sobreposta à camada roxa */
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top center;
-}
-
-main::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(14, 0, 49, 0.5); /* Cor roxa com opacidade */
-  backdrop-filter: sepia(9) brightness(0.3); /* Aplica o efeito de desfoque */
-  z-index: 2; /* Garante que a camada roxa fique sobreposta à imagem com efeito sepia */
 }
 
 h1,
