@@ -1,8 +1,8 @@
 import { DateFormatter } from '@/utils/dateFormatter';
 import axiosClient from '../api';
-import { IGameDetailedInfoResponse, IGeneralInfo } from './raw.type';
+import { IGameDetailedInfoResponse, IGeneralInfo, IPlatformListResponse } from './raw.type';
 
-import { IDLCsInput, IGameInput } from '@/@types/Games';
+import { IDLCsInput, IGameInput, IPlataformInput } from '@/@types/Games';
 
 export class GameClient {
   async getGameById(id: number): Promise<IGameDetailedInfoResponse> {
@@ -26,6 +26,13 @@ export class GameClient {
           page_size: input.page_size,
         },
       },
+    );
+    return response.data;
+  }
+
+  async getPlataforms(input: IPlataformInput): Promise<IPlatformListResponse[]> {
+    const response = await axiosClient.get(
+      `/api/platforms`, { params: input },
     );
     return response.data;
   }

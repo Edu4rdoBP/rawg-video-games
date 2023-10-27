@@ -1,4 +1,4 @@
-import { IGenres, IMetacriticPlatform, IPlatformInfo } from '@/@types/Games';
+import { IGenres, IMetacriticPlatform, IPlatformByGame } from '@/@types/Games';
 
 interface ESRBRating {
   id: number;
@@ -25,7 +25,7 @@ interface IGameInfoResponse {
   suggestions_count: number;
   updated: string;
   esrb_rating: ESRBRating;
-  platforms: IPlatformInfo[];
+  platforms: IPlatformByGame[];
   genres: IGenres[]
 }
 
@@ -60,4 +60,15 @@ export interface IGameDetailedInfoResponse extends IGameInfoResponse {
   screenshots_count: number;
   movies_count: number;
   creators_count: number;
+}
+
+export interface IPlatformListResponse {
+  id: number;
+  name: string;
+  slug: string;
+  games_count: number;
+  image_background: string;
+  image?: string | null;
+  year_start?: number | null;
+  year_end?: number | null;
 }

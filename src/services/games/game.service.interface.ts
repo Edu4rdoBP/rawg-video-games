@@ -3,13 +3,15 @@ import {
   IGameDetails,
   IGameInfo,
   IGameInput,
+  IPlataformInput,
+  IPlatformList,
 } from '@/@types/Games';
-import { IGeneralInfo } from './raw.type';
 
-interface IGameService {
+export interface IGameService {
   fetchGameById(id: number): Promise<IGameDetails>;
   fetchGames(input: IGameInput): Promise<IGameInfo[]>;
   fetchDLCs(input: IDLCsInput): Promise<IGameInfo[]>;
+  fetchPlatforms(input: IPlataformInput): Promise<IPlatformList[]>;
 }
 
-export default IGameService;
+

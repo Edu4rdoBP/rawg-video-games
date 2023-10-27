@@ -1,15 +1,17 @@
 import { GameClient } from './game.client';
 import { GameHelper } from './game.mapper';
-import IService from './game.service.interface';
+import { IGameService } from './game.service.interface';
 
 import {
   IDLCsInput,
   IGameDetails,
   IGameInfo,
   IGameInput,
+  IPlataformInput,
+  IPlatformList,
 } from '@/@types/Games';
 
-export class GameService implements IService {
+export class GameService implements IGameService {
   private _client: GameClient;
 
   constructor() {
@@ -29,5 +31,10 @@ export class GameService implements IService {
   async fetchDLCs(input: IDLCsInput): Promise<IGameInfo[]> {
     const response = await this._client.getDLCs(input);
     return GameHelper.parseGameInfo(response);
+  }
+
+  async fetchPlatforms(input: IPlataformInput): Promise<IPlatformList[]> {
+    const response = await this._client.getPlataforms(input);
+    return GameHelper.parsePlataformsInfo(response);
   }
 }
