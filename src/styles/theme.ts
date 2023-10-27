@@ -4,6 +4,8 @@ interface ITheme {
   textMuted: string;
   label: string;
   badge: string;
+  white: string;
+  spaceGray: string;
 }
 
 export const defaultTheme: ITheme = {
@@ -12,6 +14,8 @@ export const defaultTheme: ITheme = {
   textMuted: '#848586',
   label: '#A074FF',
   badge: '#242424',
+  white: '#FFFFFF',
+  spaceGray: '#282431',
 };
 
 export const contrastTheme: ITheme = {
@@ -20,4 +24,6 @@ export const contrastTheme: ITheme = {
   textMuted: '#848586',
   label: '#A074FF',
   badge: '#242424',
+  white: '#FFFFFF',
+  spaceGray: '#282431',
 };
