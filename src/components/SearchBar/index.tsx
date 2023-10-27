@@ -32,7 +32,10 @@ export function SearchBar() {
   return (
     <S.Wrapper>
       <S.Form onSubmit={handleSubmit}>
+        <S.SearchIcon />
         <S.Input
+          className='font-medium'
+          placeholder='Buscar jogo'
           type='text'
           name=''
           value={query}
@@ -46,7 +49,6 @@ export function SearchBar() {
             }, 150);
           }}
         />
-        <button type='submit'>Search</button>
       </S.Form>
       {focus && <ListView loading={loading} games={gameList} />}
     </S.Wrapper>

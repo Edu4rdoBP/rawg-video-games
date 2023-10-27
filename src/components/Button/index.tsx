@@ -1,7 +1,6 @@
 import * as S from './style';
 import { IButtonProps } from './type';
-
-import { useTheme } from '@/contexts/Theme';
+import { useTheme } from 'styled-components';
 
 export default function Button({ children, onClick, type }: IButtonProps) {
   const { theme } = useTheme();

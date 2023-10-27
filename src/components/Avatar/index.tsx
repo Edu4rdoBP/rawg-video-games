@@ -4,7 +4,7 @@ interface ILogoProps {
   color?: string;
 }
 
-export function Avatar({ color = '#712fff' }: ILogoProps) {
+export function Avatar({ color = '#848586' }: ILogoProps) {
   return (
     <S.Wrapper>
       <svg

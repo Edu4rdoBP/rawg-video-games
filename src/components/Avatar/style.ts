@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div(
+  ({ theme }) => `
   border-radius: 50%;
-  background-color: white;
+  border: 1px solid ${theme.primary};
+  background-color: #030303;
   width: 57px;
   height: 57px;
   position: relative;
@@ -12,4 +14,5 @@ export const Wrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
   }
-`;
+`,
+);
