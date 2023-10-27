@@ -1,19 +1,14 @@
 import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 import '@/styles/globals.css';
-import { NextIntlClientProvider } from 'next-intl';
 
-import { ITheme } from '@/@types/Theme';
 import { lato, poppins } from '@/fonts';
 import { Header } from '@/templates/Header';
-import { ThemeProvider } from '@/contexts/Theme';
-
+import Provider from './providers';
 interface LocaleLayoutProps {
   children: ReactNode;
   params: {
     locale: string;
-    theme: ITheme;
   };
 }
 
@@ -26,28 +21,19 @@ export default async function RootLayout({
   children,
   params: { locale },
 }: LocaleLayoutProps) {
-  let messages;
-  try {
-    messages = (await import(`../../messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
-
   return (
     <html lang={locale}>
-      <body className={`${lato.variable} ${poppins.variable} wrapper`}>
-        <ThemeProvider>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <header>
-              <Header />
-            </header>
-            <main>{children}</main>
-            {/* <footer>
+      <Provider locale={locale}>
+        <body className={`${lato.variable} ${poppins.variable} wrapper`}>
+          <header>
+            <Header />
+          </header>
+          <main>{children}</main>
+          {/* <footer>
                 <Footer />
               </footer> */}
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
+        </body>
+      </Provider>
     </html>
   );
 }
