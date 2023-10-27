@@ -26,7 +26,7 @@ export const Form = styled.form(
   border: 1px solid ${theme.primary};
   background-color: ${theme.secondary};
   border-radius: 47px;
-  padding: 15px 40px 15px 50px;
+  padding: 12px 40px 12px 50px;
   position: relative;
 
     &::placeholder {
@@ -35,13 +35,14 @@ export const Form = styled.form(
 );
 
 export const SearchIcon = styled(AiOutlineSearch).attrs({
-  size: 20,
+  size: 21,
 })(
   ({ theme }) => `
   color: ${theme.primary};
   position: absolute;
   left: 15px;
-  top: 18px;
+  top: 50%;
+  transform: translateY(-50%);
 `,
 );
 
