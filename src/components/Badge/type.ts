@@ -1,7 +1,11 @@
+import { ReactNode } from 'react';
+
 export interface IBadgePropsLayout {
-  isPrimary?: boolean;
+  isSmall?: boolean;
+  color: string;
 }
 
 export interface IBadgeProps extends IBadgePropsLayout {
   label: string;
+  icon?: ReactNode;
 }

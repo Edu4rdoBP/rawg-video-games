@@ -1,13 +1,16 @@
 import * as S from './style';
 import { IBadgeProps } from './type';
 
-export function Badge({ isPrimary, label }: IBadgeProps) {
+export function Badge({ isSmall, label, color, icon }: IBadgeProps) {
   return (
     <S.Badge
-      className={isPrimary ? 'font-medium' : 'font-big'}
-      isPrimary={isPrimary}
+      color={color}
+      className={isSmall ? 'font-tiny' : 'font-big'}
+      isSmall={isSmall}
     >
-      {label}
+      <div className='flex gap-2 items-center'>
+        {icon} {label}
+      </div>
     </S.Badge>
   );
 }
