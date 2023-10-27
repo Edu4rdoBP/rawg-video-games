@@ -8,6 +8,7 @@ import {
   IGameInfo,
   IGameInput,
 } from '@/@types/Games';
+import { IGeneralInfo } from './raw.type';
 
 export class GameService implements IService {
   private _client: GameClient;

@@ -4,6 +4,7 @@ import {
   IGameInfo,
   IGameInput,
 } from '@/@types/Games';
+import { IGeneralInfo } from './raw.type';
 
 interface IGameService {
   fetchGameById(id: number): Promise<IGameDetails>;

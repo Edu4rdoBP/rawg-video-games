@@ -6,7 +6,7 @@ interface ESRBRating {
   name: string;
 }
 
-export interface IGameInfoResponse {
+interface IGameInfoResponse {
   id: number;
   slug: string;
   name: string;
@@ -26,6 +26,13 @@ export interface IGameInfoResponse {
   updated: string;
   esrb_rating: ESRBRating;
   platforms: PlatformInfo[];
+}
+
+export interface IGeneralInfo {
+  count: number;
+  next: string | undefined;
+  previous: string | undefined;
+  results: IGameInfoResponse[];
 }
 
 export interface IGameDetailedInfoResponse extends IGameInfoResponse {

@@ -1,12 +1,13 @@
 'use client';
-import { IGameDetailedInfoResponse, IGameInfoResponse } from './raw.type';
+import { IGameDetailedInfoResponse, IGeneralInfo } from './raw.type';
 
 import { IGameDetails, IGameInfo } from '@/@types/Games';
 
 export class GameHelper {
-  static parseGameInfo(input: IGameInfoResponse[]): IGameInfo[] {
+  static parseGameInfo(input: IGeneralInfo): IGameInfo[] {
     const result: IGameInfo[] = [];
-    input.map((item) => {
+    const { count } = input;
+    input.results.map((item) => {
       result.push({
         id: item.id,
         slug: item.slug,
@@ -16,6 +17,7 @@ export class GameHelper {
         metacritic: item.metacritic,
         updated: item.updated,
         platforms: item.platforms,
+        count: count
       });
     });
     return result;

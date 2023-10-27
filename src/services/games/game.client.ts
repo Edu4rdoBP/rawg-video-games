@@ -1,6 +1,6 @@
 import { DateFormatter } from '@/utils/dateFormatter';
 import axiosClient from '../api';
-import { IGameDetailedInfoResponse, IGameInfoResponse } from './raw.type';
+import { IGameDetailedInfoResponse, IGeneralInfo } from './raw.type';
 
 import { IDLCsInput, IGameInput } from '@/@types/Games';
 
@@ -10,14 +10,14 @@ export class GameClient {
     return response.data;
   }
 
-  async getListGames(input?: IGameInput): Promise<IGameInfoResponse[]> {
+  async getListGames(input?: IGameInput): Promise<IGeneralInfo> {
     const response = await axiosClient.get(`/api/games`, {
       params: { dates: `2023-01-01.${DateFormatter.getFullDate()}`, ...input },
     });
-    return response.data.results;
+    return response.data;
   }
 
-  async getDLCs(input: IDLCsInput): Promise<IGameInfoResponse[]> {
+  async getDLCs(input: IDLCsInput): Promise<IGeneralInfo> {
     const response = await axiosClient.get(
       `/api/games/${input.gamePK}/additions`,
       {
@@ -27,6 +27,6 @@ export class GameClient {
         },
       },
     );
-    return response.data.results;
+    return response.data;
   }
 }

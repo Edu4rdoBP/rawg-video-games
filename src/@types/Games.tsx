@@ -58,6 +58,7 @@ export interface IGameInfo {
   metacritic: number;
   updated: string;
   platforms: PlatformInfo[];
+  count?: number;
 }
 
 export interface IGameDetails extends IGameInfo {
