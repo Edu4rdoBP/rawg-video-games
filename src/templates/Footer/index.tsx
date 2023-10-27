@@ -1,12 +1,9 @@
-import * as S from './Footer';
+import * as S from './footer';
 
-import { useTheme } from '@/contexts/Theme';
 
 export default function Footer() {
-  const { theme } = useTheme();
-
   return (
-    <S.Footer theme={theme}>
+    <S.Footer>
       <div>teste</div>
     </S.Footer>
   );

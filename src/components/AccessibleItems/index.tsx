@@ -5,11 +5,9 @@ import { ITranslateProps } from '@/@types/Globals';
 import * as S from '@/components/AccessibleItems/AccessibleItems';
 import Button from '@/components/Button';
 import { useGlobalContext } from '@/contexts/Font';
-import { useTheme } from '@/contexts/Theme';
 
 export default function AccessibleItems({ t }: ITranslateProps) {
   const { fontSize, setFontSize } = useGlobalContext();
-  const { toggleTheme } = useTheme();
   useEffect(() => {
     if (typeof document !== 'undefined') {
       const root = document.documentElement;
@@ -31,7 +29,7 @@ export default function AccessibleItems({ t }: ITranslateProps) {
         <Button onClick={() => handleFontSize(-4)}>{t('decreaseFont')}</Button>
       </div>
       <div>
-        <Button onClick={() => toggleTheme()}>
+        <Button onClick={() => { }}>
           <MdContrast />
           {t('contrast')}
         </Button>

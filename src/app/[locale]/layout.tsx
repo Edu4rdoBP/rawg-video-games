@@ -4,7 +4,7 @@ import '@/styles/globals.css';
 
 import { lato, poppins } from '@/fonts';
 import { Header } from '@/templates/Header';
-import Provider from './providers';
+import Provider from '../../providers/providers';
 interface LocaleLayoutProps {
   children: ReactNode;
   params: {
