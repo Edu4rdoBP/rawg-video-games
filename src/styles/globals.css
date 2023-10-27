@@ -1,5 +1,6 @@
 :root {
   --font-size: 16px;
+  --border-radius: 10px;
 }
 
 @tailwind base;
@@ -14,9 +15,9 @@ body {
   font-size: var(--font-size);
   color: white;
   background-color: black;
-  background-image: url('../../public/img/background2.jpg');
+  background-image: url('../../public/img/background.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: top center;
   padding: 50px 0;
 }
@@ -27,12 +28,12 @@ body::after {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vw;
   background: rgb(58, 24, 130);
   background: linear-gradient(
     180deg,
     rgba(58, 24, 130, 0.5) 1%,
-    rgba(0, 0, 0, 0.8) 86%
+    rgba(0, 0, 0, 1) 56%
   );
   backdrop-filter: sepia(9) brightness(0.3);
   z-index: -1;
@@ -42,8 +43,6 @@ main {
   position: relative;
   display: inline-block;
   width: 100%;
-  height: 500px;
-  overflow: hidden;
 }
 
 h1,
@@ -60,7 +59,7 @@ h6 {
 }
 
 .font-small {
-  font-size: var(--font-size - 3px);
+  font-size: calc(var(--font-size) - 3px);
 }
 
 .font-medium {

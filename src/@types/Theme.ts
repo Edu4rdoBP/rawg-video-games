@@ -1,9 +1,4 @@
-export interface ITheme {
-  primary: string;
-  secondary: string;
-  textMuted: string;
-  label: string;
-}
+import { ITheme } from '@/styles/theme';
 
 export interface IThemeContextType {
   theme: ITheme;

@@ -1,11 +1,13 @@
-interface ITheme {
+export interface ITheme {
   primary: string;
   secondary: string;
   textMuted: string;
   label: string;
   badge: string;
   white: string;
+  black: string;
   spaceGray: string;
+  yellow: string;
 }
 
 export const defaultTheme: ITheme = {
@@ -15,7 +17,9 @@ export const defaultTheme: ITheme = {
   label: '#A074FF',
   badge: '#242424',
   white: '#FFFFFF',
+  black: '#0F0F0F',
   spaceGray: '#282431',
+  yellow: '#CCE235',
 };
 
 export const contrastTheme: ITheme = {
@@ -25,5 +29,7 @@ export const contrastTheme: ITheme = {
   label: '#A074FF',
   badge: '#242424',
   white: '#FFFFFF',
+  black: '#0F0F0F',
   spaceGray: '#282431',
+  yellow: '#CCE235',
 };
