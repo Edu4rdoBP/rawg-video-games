@@ -4,10 +4,8 @@ import * as S from './style';
 import { useRef, useState } from 'react';
 import { useGameList } from '@/hooks/useGameList';
 import { ListView } from './listView';
-import { useTheme } from '@/contexts/Theme';
 
 export function SearchBar() {
-  const { theme } = useTheme();
   const [query, setQuery] = useState<string>('');
   const [focus, setFocus] = useState<boolean>(false);
   const { fetchGames, gameList, loading } = useGameList();
@@ -17,7 +15,7 @@ export function SearchBar() {
     fetchGames({ search: query });
   };
 
-  const timerRef = useRef<NodeJS.Timeout | null>(setTimeout(() => {}, 0));
+  const timerRef = useRef<NodeJS.Timeout | null>(setTimeout(() => { }, 0));
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
@@ -33,7 +31,7 @@ export function SearchBar() {
 
   return (
     <S.Wrapper>
-      <S.Form onSubmit={handleSubmit} theme={theme}>
+      <S.Form onSubmit={handleSubmit}>
         <S.Input
           type='text'
           name=''
