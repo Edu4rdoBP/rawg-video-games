@@ -6,5 +6,6 @@ export const Content = styled.div(
   background-color: ${color ? theme[color] : theme.primary};
   padding: 5px 37px;
   text-transform: uppercase;
+  text-align: center;
 `,
 );

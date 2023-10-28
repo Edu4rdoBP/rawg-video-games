@@ -9,7 +9,7 @@ export const Badge = styled.span<IBadgePropsLayout>(
     border-radius: ${isSmall ? '8px' : '12px'};
     padding: ${isSmall ? '3px 10px' : '10px 20px'};
     font-family: var(--font-montserrat);
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0px;
   }
 `,
