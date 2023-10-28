@@ -17,7 +17,7 @@ interface IGameInfoResponse {
   name: string;
   released: string;
   tba: boolean;
-  background_image: string;
+  background_image?: string;
   rating: number;
   rating_top: number;
   ratings: Record<string, unknown>;

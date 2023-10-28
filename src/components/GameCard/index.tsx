@@ -13,7 +13,7 @@ import { Platforms } from '../Platforms';
 interface IGameCard {
   id: number;
   name: string;
-  backgroundImage: string;
+  backgroundImage?: string;
   genres: IGenres[];
   platforms?: IPlatformByGame[];
   metacritic: number;
@@ -32,8 +32,8 @@ export function GameCard({
     <S.GameCard>
       <Link href={`/games/${id}`}>
         <Image
-          loader={() => backgroundImage}
-          src={backgroundImage}
+          loader={() => backgroundImage || ``}
+          src={backgroundImage || ``}
           width={100}
           height={200}
           alt={t('altImage', { name: name })}
@@ -51,7 +51,10 @@ export function GameCard({
               />
             </div>
           </div>
-          <Platforms t={t} data={platforms} />
+          <S.Media>
+            <Platforms t={t} data={platforms} />
+            <Link href={`/games/${id}`}>{t('seeMore')}</Link>
+          </S.Media>
         </S.ContentCard>
       </Link>
     </S.GameCard>

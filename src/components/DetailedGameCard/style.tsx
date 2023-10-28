@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface IBackgroundImage {
-  backgroundImage: string;
+  backgroundImage?: string;
 }
 
 export const Wrapper = styled.div`

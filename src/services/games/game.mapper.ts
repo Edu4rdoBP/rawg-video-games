@@ -30,7 +30,6 @@ export class GameHelper {
       metacritic_url: input.metacritic_url,
       additions_count: input.additions_count,
       metacritic_platforms: input.metacritic_platforms,
-      background_image_additional: input.background_image_additional,
       reactions: input.reactions,
       screenshots_count: input.screenshots_count,
       id: input.id,

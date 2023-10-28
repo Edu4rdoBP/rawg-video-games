@@ -38,7 +38,7 @@ export interface IGameInfo {
   id: number;
   name: string;
   released: string;
-  background_image: string;
+  background_image?: string;
   metacritic: number;
   platforms?: IPlatformByGame[];
   count?: number;
@@ -80,7 +80,6 @@ export interface IGameDetails extends IGameInfo {
   metacritic_url: string;
   additions_count: number;
   metacritic_platforms: IMetacriticPlatform[];
-  background_image_additional: string;
   reactions: Record<string, unknown>;
   screenshots_count: number;
 }

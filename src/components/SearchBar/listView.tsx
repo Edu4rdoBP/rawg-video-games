@@ -20,8 +20,8 @@ export function ListView({ games, loading, t }: IProps) {
             return (
               <div key={`item-card-${item.id}`} className='game-list-item'>
                 <Image
-                  loader={() => item.background_image}
-                  src={item.background_image}
+                  loader={() => item.background_image || ``}
+                  src={item.background_image || ``}
                   width={20}
                   height={20}
                   alt={''}
