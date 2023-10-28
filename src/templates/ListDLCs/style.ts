@@ -1,7 +1,20 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const DLCContainer = styled.div(({ theme }) => `
-border-top: 1px solid ${theme.blur};
+export const Wrapper = styled.div(
+  ({ theme }) => `
+  .tag {
+    border-bottom: 1px solid ${theme.blur};
 
-padding-top: 50px;
-`)
+    div:first-child {
+      width: 200px;
+    }
+  }
+
+`,
+);
+
+export const Cards = styled.div`
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+`;
