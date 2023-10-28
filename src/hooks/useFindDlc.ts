@@ -10,7 +10,7 @@ export const useFindDLCs = (): {
   fetchDLCs: (input: IDLCsInput) => void;
 } => {
   const [gameDLCs, setGameDLCs] = useState<IGameInfo[] | undefined>(undefined);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
 
   const service: GameService = new GameService();
