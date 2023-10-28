@@ -11,10 +11,15 @@
       "logo": ""
     },
     "searchBar": {
-      "noGameFound": "Nenhum título encontrado"
+      "noGameFound": "Nenhum título encontrado",
+      "placeholder": "Buscar jogo"
     }
   },
-  "Game": {
-    "altImage": "Imagem da capa do jogo {name}"
+  "Games": {
+    "altImage": "Imagem da capa do jogo {name}",
+    "title": "Games"
+  },
+  "Pagination": {
+    "perPage": "por página"
   }
 }
