@@ -41,7 +41,8 @@ export const ContentCard = styled.div(
 `,
 );
 
-export const Media = styled.div(({ theme }) => `
+export const Media = styled.div(
+  ({ theme }) => `
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -53,5 +54,5 @@ export const Media = styled.div(({ theme }) => `
       color: ${theme.primary};
     }
   }
-`)
-
+`,
+);

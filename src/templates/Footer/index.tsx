@@ -1,21 +1,19 @@
-"use client";
-import * as S from './footer';
+'use client';
+import * as S from './style';
 import { Main } from '@/styles/main';
 
-import { useTheme } from 'styled-components';
 import { Logo } from '@/components/Logo';
 import { SocialNetworks } from '../../components/SocialNetwork';
-import { Button } from '@/components/Button';
-
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
-
+  const t = useTranslations('Footer');
   return (
     <Main>
       <S.Row>
         <div>
           <Logo></Logo>
-          <p>&copy; Get Over Here 2023 Todos os direitos reservados.</p>
+          <p>&copy; {t('disclaimer')}</p>
         </div>
         <SocialNetworks></SocialNetworks>
       </S.Row>

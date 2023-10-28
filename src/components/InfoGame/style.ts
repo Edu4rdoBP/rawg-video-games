@@ -7,11 +7,13 @@ export const Wrapper = styled.div`
   height: 100%;
 `;
 
-export const Description = styled.p(({ theme }) => `
-color: ${theme.white};
-font-weight: 300;
-text-align: justify;
-`);
+export const Description = styled.p(
+  ({ theme }) => `
+    color: ${theme.white};
+    font-weight: 300;
+    text-align: justify;
+`,
+);
 
 export const Info = styled.p(
   ({ theme }) => `
@@ -30,16 +32,19 @@ export const Statistics = styled.div`
   }
 `;
 
-export const InfoData = styled.div(({ theme }) => `
+export const InfoData = styled.div(
+  ({ theme }) => `
 div{
   color: ${theme.textMuted};
   font-weight: 300;
   font-size: calc(var(--font-size) - 2px);
 
 }
-`)
+`,
+);
 
-export const Media = styled.div(({ theme }) => `
+export const Media = styled.div(
+  ({ theme }) => `
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
@@ -51,4 +56,5 @@ export const Media = styled.div(({ theme }) => `
       color: ${theme.primary};
     }
   }
-`)
+`,
+);

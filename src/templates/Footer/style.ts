@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-export const Footer = styled.div`
-  `
+export const Footer = styled.div``;
 
 export const Row = styled.div`
   background-color: ${({ theme }) => theme.dark};
@@ -20,9 +19,9 @@ export const Row = styled.div`
     align-items: center;
     gap: 18px;
   }
-  
-  p{
-    margin-top: 7px; 
+
+  p {
+    margin-top: 7px;
   }
 
   @media (max-width: 767px) {
@@ -48,5 +47,4 @@ export const Row = styled.div`
       margin-bottom: 28px;
     }
   }
-  
-  `
+`;

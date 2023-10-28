@@ -19,7 +19,9 @@ export function InfoGame({ game }: InfoGameProps) {
   console.log(game);
   return (
     <S.Wrapper>
-      <S.Description className='font-moderate'>{game.description}</S.Description>
+      <S.Description className='font-moderate'>
+        {game.description}
+      </S.Description>
       <S.InfoData>
         <div className='uppercase mb-2'>
           {t('info.release', { date: game.released })}
