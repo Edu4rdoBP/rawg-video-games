@@ -12,7 +12,7 @@ export class GameClient {
 
   async getListGames(input?: IGameInput): Promise<IGeneralInfo> {
     const response = await axiosClient.get(`/api/games`, {
-      params: { dates: `2023-01-01,${DateFormatter.getFullDate()}`, ...input },
+      params: { dates: `2023-01-01,${DateFormatter.getFullDate()}`, ordering: '-rating', ...input },
     });
     return response.data;
   }

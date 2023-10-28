@@ -32,10 +32,10 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
     setItemsPerPage(value);
   };
 
-  const startIndex = currentPage * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const displayedNames = games?.slice(startIndex, endIndex);
-  const pageCount = displayedNames ? Math.ceil(count / itemsPerPage) : 0;
+  // const startIndex = currentPage * itemsPerPage;
+  // const endIndex = startIndex + itemsPerPage;
+  // const displayedNames = games?.slice(startIndex, endIndex);
+  const pageCount = Math.ceil(count / itemsPerPage)
 
   return (
     <>
@@ -62,7 +62,7 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
         </div>
         <S.ReactPaginate className='font-big'>
           <ReactPaginate
-            pageCount={pageCount}
+            pageCount={pageCount - 1}
             pageRangeDisplayed={5}
             marginPagesDisplayed={1}
             previousLabel={'Anterior'}
