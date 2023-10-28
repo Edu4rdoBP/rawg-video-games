@@ -10,4 +10,9 @@ export class DateFormatter {
 
     return formattedDate;
   }
+  static convertDate(date: string) {
+    const partes = date.split('-');
+    const novaData = partes[2] + '/' + partes[1] + '/' + partes[0];
+    return novaData;
+  }
 }

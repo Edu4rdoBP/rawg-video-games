@@ -2,7 +2,7 @@ import { DateFormatter } from '@/utils/dateFormatter';
 import axiosClient from '../api';
 import { IGameDetailedInfoResponse, IGeneralInfo } from './raw.type';
 
-import { IDLCsInput, IGameInput, IPlatformsInput } from '@/@types/Games';
+import { IDLCsInput, IGameInput } from '@/@types/Games';
 
 export class GameClient {
   async getGameById(id: number): Promise<IGameDetailedInfoResponse> {
@@ -12,7 +12,7 @@ export class GameClient {
 
   async getListGames(input?: IGameInput): Promise<IGeneralInfo> {
     const response = await axiosClient.get(`/api/games`, {
-      params: { dates: `2023-01-01.${DateFormatter.getFullDate()}`, ...input },
+      params: { dates: `2023-01-01,${DateFormatter.getFullDate()}`, ...input },
     });
     return response.data;
   }
@@ -27,11 +27,6 @@ export class GameClient {
         },
       },
     );
-    return response.data;
-  }
-
-  async getPlatforms(input?: IPlatformsInput): Promise<IGeneralInfo> {
-    const response = await axiosClient.get(`/api/platforms`, { params: input });
     return response.data;
   }
 }

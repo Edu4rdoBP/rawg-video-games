@@ -1,4 +1,9 @@
-import { IGenres, IMetacriticPlatform, IPlatformByGame } from '@/@types/Games';
+import {
+  IAuthors,
+  IGenres,
+  IMetacriticPlatform,
+  IPlatformByGame,
+} from '@/@types/Games';
 
 interface ESRBRating {
   id: number;
@@ -26,6 +31,7 @@ interface IGameInfoResponse {
   updated: string;
   esrb_rating: ESRBRating;
   platforms: IPlatformByGame[];
+  parent_platforms?: IPlatformByGame[];
   genres: IGenres[];
 }
 
@@ -39,6 +45,7 @@ export interface IGeneralInfo {
 export interface IGameDetailedInfoResponse extends IGameInfoResponse {
   name_original: string;
   description: string;
+  description_raw: string;
   achievements_count: number;
   parent_achievements_count: string;
   reddit_url: string;
@@ -50,6 +57,8 @@ export interface IGameDetailedInfoResponse extends IGameInfoResponse {
   youtube_count: string;
   alternative_names: string[];
   metacritic_url: string;
+  developers?: IAuthors[];
+  publishers?: IAuthors[];
   parents_count: number;
   additions_count: number;
   game_series_count: number;

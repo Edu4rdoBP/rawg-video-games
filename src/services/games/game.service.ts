@@ -7,8 +7,6 @@ import {
   IGameDetails,
   IGameInfo,
   IGameInput,
-  IPlatformsInput,
-  IPlatformList,
 } from '@/@types/Games';
 
 export class GameService implements IGameService {
@@ -31,10 +29,5 @@ export class GameService implements IGameService {
   async fetchDLCs(input: IDLCsInput): Promise<IGameInfo[]> {
     const response = await this._client.getDLCs(input);
     return GameHelper.parseGameInfo(response);
-  }
-
-  async fetchPlatforms(input?: IPlatformsInput): Promise<IPlatformList[]> {
-    const response = await this._client.getPlatforms(input);
-    return GameHelper.parsePlatformsInfo(response);
   }
 }
