@@ -1,8 +1,8 @@
 interface IPageInput {
   page?: number;
-  page_size?: number
+  page_size?: number;
 }
-export interface IPlataformInput extends IPageInput {
+export interface IPlatformsInput extends IPageInput {
   ordering?: string;
 }
 
@@ -45,11 +45,6 @@ export interface IGameInfo {
   genres: IGenres[];
 }
 
-interface IRequirements {
-  minimum: string;
-  recommended: string;
-}
-
 export interface IGenres {
   id: number;
   name: string;
@@ -67,6 +62,11 @@ export interface IPlatformByGame {
   released_at: string;
   requirements: IRequirements;
 }
+interface IRequirements {
+  minimum: string;
+  recommended: string;
+}
+
 export interface IMetacriticPlatform {
   metascore: number;
   url: string;
@@ -85,5 +85,5 @@ export interface IGameDetails extends IGameInfo {
 
 export interface IPlatformList {
   id: number;
-  image?: string | null;
+  image: string;
 }

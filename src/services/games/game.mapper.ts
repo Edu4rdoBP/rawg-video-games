@@ -1,13 +1,18 @@
 'use client';
-import { IGameDetailedInfoResponse, IGeneralInfo, IPlatformListResponse } from './raw.type';
+import {
+  IGameDetailedInfoResponse,
+  IGeneralInfo,
+  IPlatformListResponse,
+} from './raw.type';
 
 import { IGameDetails, IGameInfo, IPlatformList } from '@/@types/Games';
 
 export class GameHelper {
   static parseGameInfo(input: IGeneralInfo): IGameInfo[] {
     const result: IGameInfo[] = [];
+    const gamesInfo = input.results as IGameDetailedInfoResponse[];
     const { count } = input;
-    input.results.map((item) => {
+    gamesInfo.map((item) => {
       result.push({
         id: item.id,
         name: item.name,
@@ -38,18 +43,21 @@ export class GameHelper {
       background_image: input.background_image,
       metacritic: input.metacritic,
       platforms: input.platforms,
-      genres: input.genres
+      genres: input.genres,
     };
   }
 
-  static parsePlataformsInfo(input: IPlatformListResponse[]): IPlatformList[] {
+  static parsePlatformsInfo(input: IGeneralInfo): IPlatformList[] {
     const result: IPlatformList[] = [];
-    input.map((item) => {
+    const platformInfo = input.results as IPlatformListResponse[];
+    platformInfo.map((item) => {
       result.push({
         id: item.id,
-        image: item.image,
+        image: item.image_background,
       });
     });
+    console.log('teste', result);
+
     return result;
   }
 }

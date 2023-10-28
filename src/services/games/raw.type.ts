@@ -26,14 +26,14 @@ interface IGameInfoResponse {
   updated: string;
   esrb_rating: ESRBRating;
   platforms: IPlatformByGame[];
-  genres: IGenres[]
+  genres: IGenres[];
 }
 
 export interface IGeneralInfo {
   count: number;
   next: string | undefined;
   previous: string | undefined;
-  results: IGameInfoResponse[];
+  results: IGameInfoResponse[] | IPlatformListResponse[];
 }
 
 export interface IGameDetailedInfoResponse extends IGameInfoResponse {
