@@ -1,9 +1,9 @@
 import { useFindGames } from '@/hooks/useFindGame';
 import { useEffect } from 'react';
 import * as S from './style';
-import Skeleton from '../Skeleton';
-import { Tag } from '../Tag';
-import { InfoGame } from '../InfoGame';
+import Skeleton from '../../components/Skeleton';
+import { Tag } from '../../components/Tag';
+import { InfoGame } from '../../components/InfoGame';
 
 interface IDetailedGameCardProps {
   id: number;

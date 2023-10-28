@@ -4,6 +4,7 @@ export const GameCard = styled.div`
   flex: 1 0 20%;
   box-sizing: border-box;
   display: flex;
+  max-width: 300px;
   justify-content: space-between;
   flex-direction: column;
   border-radius: var(--border-radius);

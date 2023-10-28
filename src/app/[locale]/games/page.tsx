@@ -1,7 +1,7 @@
 'use client';
 import * as S from '@/styles/main';
 import { ListGames } from './listGames';
-import { DetailedGameCard } from '@/components/DetailedGameCard';
+import { DetailedGameCard } from '@/templates/DetailedGameCard';
 
 export function FirstPage() {
   return (

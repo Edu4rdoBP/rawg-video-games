@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 
 import { useFindGames } from '@/hooks/useFindGame';
 import { useFindDLCs } from '@/hooks/useFindDlc';
+import { ListGamesDLCs } from '@/templates/ListDLCs';
 
 interface pageProps {
   params: { id: string };
@@ -30,13 +31,7 @@ export default function DetailGame({ params }: pageProps) {
       <p>{gameDetail?.description}</p>
       <br></br>
       <br></br>
-      {gameDLCs?.map((DLC) => {
-        return (
-          <div key={`dlc-item-${DLC.id}`}>
-            <h2>{DLC.name}</h2>
-          </div>
-        );
-      })}
+      <ListGamesDLCs id={params.id} />
     </div>
   );
 }

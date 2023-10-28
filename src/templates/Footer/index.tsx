@@ -1,5 +1,5 @@
 "use client";
-import * as S from './Footer';
+import * as S from './footer';
 import { Main } from '@/styles/main';
 
 import { useTheme } from 'styled-components';

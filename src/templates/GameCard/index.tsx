@@ -4,11 +4,11 @@ import Link from 'next/link';
 import * as S from './style';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Badge } from '../Badge';
+import { Badge } from '../../components/Badge';
 import { AiFillStar } from 'react-icons/ai';
 import { useTheme } from 'styled-components';
-import { Genres } from '../Genres';
-import { Platforms } from '../Platforms';
+import { Genres } from '../../components/Genres';
+import { Platforms } from '../../components/Platforms';
 
 interface IGameCard {
   id: number;

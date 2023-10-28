@@ -1,5 +1,5 @@
 'use client';
-import { GameCard } from '@/components/GameCard';
+import { GameCard } from '@/templates/GameCard';
 import { Pagination } from '@/components/Pagination';
 import { useGameList } from '@/hooks/useGameList';
 
