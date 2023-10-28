@@ -15,6 +15,9 @@
       "placeholder": "Buscar jogo"
     }
   },
+  "Footer": {
+    "disclaimer": "Get Over Here 2023 Todos os direitos reservados."
+  },
   "Games": {
     "altImage": "Imagem da capa do jogo {name}",
     "title": "Joos",

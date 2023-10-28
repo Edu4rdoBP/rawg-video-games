@@ -15,6 +15,9 @@
       "placeholder": "Search game"
     }
   },
+  "Footer": {
+    "disclaimer": "Get Over Here 2023 All rights reserved."
+  },
   "Games": {
     "altImage": "Game cover image {name}",
     "title": "Games",
