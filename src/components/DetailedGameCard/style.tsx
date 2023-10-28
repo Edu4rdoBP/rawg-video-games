@@ -11,14 +11,20 @@ export const Wrapper = styled.div`
 export const Card = styled.div(
   ({ theme }) => `
   width: 100%;
-  height: 550px;
+  height: auto;
+  overflow: hidden;  height: 25%;
+
   background-color: ${theme.blur};
   border-radius: calc(var(--border-radius) + 10px);
-  overflow: hidden;
   backdrop-filter: blur(11px);
   display: flex;
   h2 {
     text-align: center;
+  }
+
+  @media (max-width: 1023px){
+    height: 100%;
+    flex-direction: column;
   }
 `,
 );
@@ -28,10 +34,14 @@ export const BackgroundImage = styled.div<IBackgroundImage>(
   background-image: url('${backgroundImage}');
   background-repeat: no-repeat;
   background-size: 155%;
-  background-position: bottom center;
+  background-position: center;
   min-width: 57%;
-  height: 100%;
-  z-index: -1px;
+  min-height: 300px;
+  z-index: -1;
+
+  @media (max-width: 1240px){
+    background-size: cover;
+  }
 `,
 );
 
@@ -43,5 +53,8 @@ export const Content = styled.div`
   h2 {
     text-transform: uppercase;
     margin-bottom: 20px;
+  }
+  @media (max-width: 520px) {
+    padding: 30px;
   }
 `;

@@ -4,7 +4,12 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 15px;
   height: 100%;
+
+  @media (max-width: 1023px) {
+    gap: 30px;
+  }
 `;
 
 export const Description = styled.p(
@@ -14,6 +19,22 @@ export const Description = styled.p(
     text-align: justify;
 `,
 );
+
+export const ContainerInfo = styled.div`
+  .info {
+    display: flex;
+    gap: 10px;
+  }
+
+  @media (max-width: 520px) {
+    .info {
+      flex-direction: column;
+      p {
+        flex-wrap: wrap;
+      }
+    }
+  }
+`;
 
 export const Info = styled.p(
   ({ theme }) => `
@@ -34,12 +55,14 @@ export const Statistics = styled.div`
 
 export const InfoData = styled.div(
   ({ theme }) => `
-div{
-  color: ${theme.textMuted};
-  font-weight: 300;
-  font-size: calc(var(--font-size) - 2px);
+  div {
+    font-weight: 300;
+    font-size: calc(var(--font-size) - 2px);
+  }
+  span {
+    color: ${theme.textMuted};
 
-}
+  }
 `,
 );
 
