@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Skeleton from '../Skeleton';
 import * as S from './style';
 import { ITranslateProps } from '@/@types/Globals';
+import Image from 'next/image';
 
 interface IProps extends ITranslateProps {
   games: IGameInfo[] | undefined;
@@ -18,7 +19,13 @@ export function ListView({ games, loading, t }: IProps) {
           games?.map((item) => {
             return (
               <div key={`item-card-${item.id}`} className='game-list-item'>
-                <img src={item.background_image} />
+                <Image
+                  loader={() => item.background_image}
+                  src={item.background_image}
+                  width={20}
+                  height={20}
+                  alt={''}
+                />
                 <Link href={`/games/${item.id}`}>{item.name}</Link>
               </div>
             );
