@@ -8,6 +8,7 @@ export interface ITheme {
   black: string;
   spaceGray: string;
   yellow: string;
+  blur: string;
 }
 
 export const defaultTheme: ITheme = {
@@ -20,6 +21,7 @@ export const defaultTheme: ITheme = {
   black: '#0F0F0F',
   spaceGray: '#282431',
   yellow: '#CCE235',
+  blur: 'rgba(255, 255, 255, 0.05)',
 };
 
 export const contrastTheme: ITheme = {
@@ -32,4 +34,5 @@ export const contrastTheme: ITheme = {
   black: '#0F0F0F',
   spaceGray: '#282431',
   yellow: '#CCE235',
+  blur: 'rgba(0, 0, 0, 0.2)',
 };
