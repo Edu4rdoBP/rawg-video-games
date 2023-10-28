@@ -10,7 +10,7 @@ export const useFindGames = (): {
   fetchGameById: (id: number) => void;
 } => {
   const [gameDetail, setGameDetail] = useState<IGameDetails>();
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
 
   const service: GameService = new GameService();

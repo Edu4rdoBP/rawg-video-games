@@ -1,5 +1,5 @@
 export interface ISkeletonProps {
-  type?: 'searchBarItem';
+  type?: 'searchBarItem' | 'detailedCard';
 }
 
 export default function Skeleton({ type }: ISkeletonProps) {
@@ -13,6 +13,18 @@ export default function Skeleton({ type }: ISkeletonProps) {
           >
             <div className='aspect-square h-[30px] w-[60px] overflow-hidden  bg-gray-300'></div>
             <p className='mt-2 block h-4 w-[80%] rounded-lg bg-gray-600 text-sm font-medium'></p>
+          </li>
+        ))}
+      </ul>
+    ),
+    detailedCard: (
+      <ul>
+        {[...Array(1)].map((movie, index) => (
+          <li
+            key={index}
+            className='relative animate-pulse flex flex-row py-1 px-[10px] gap-2 justify-center'
+          >
+            <div className='aspect-square h-[500px] rounded-[12px] w-[1300px] overflow-hidden  bg-gray-300'></div>
           </li>
         ))}
       </ul>
