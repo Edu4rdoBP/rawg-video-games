@@ -1,14 +1,31 @@
+'use client';
 import { IPlatformByGame } from '@/@types/Games';
-interface IPlatformsProps {
-  data: IPlatformByGame[];
+import { platformsIcons } from '@/constants/platforms';
+import Image from 'next/image';
+import * as S from './style';
+import { ITranslateProps } from '@/@types/Globals';
+interface IPlatformsProps extends ITranslateProps {
+  data?: IPlatformByGame[];
 }
-
-export function Platforms({ data }: IPlatformsProps) {
+export function Platforms({ data, t }: IPlatformsProps) {
   return (
-    <div className='flex gap-[4px]'>
-      {data.map((item) => {
-        return <></>;
-      })}
-    </div>
+    <S.Wrapper className='font-small'>
+      <div>
+        <p>{t('info.availableIn')}</p>
+        {data?.map((item) => {
+          const { slug } = item.platform;
+
+          return platformsIcons.map((platform) => {
+            if (slug.match(platform.name)) {
+              return (
+                <S.Icon key={item.platform.slug}>
+                  <Image src={platform.path} width={10} height={10} alt='' />
+                </S.Icon>
+              );
+            }
+          });
+        })}
+      </div>
+    </S.Wrapper>
   );
 }
