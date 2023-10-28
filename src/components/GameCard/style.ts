@@ -16,6 +16,14 @@ export const GameCard = styled.div`
     width: 100%;
     height: 180px;
   }
+
+  @media (max-width: 1023px) {
+    flex: 1 0 40%;
+  }
+
+  @media (max-width: 530px) {
+    flex: 1 0 80%;
+  }
 `;
 
 export const ContentCard = styled.div(

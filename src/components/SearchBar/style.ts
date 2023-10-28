@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 export const Wrapper = styled.div`
-  width: 31%;
+  width: 90%;
   position: relative;
+  margin: auto;
 `;
 
 export const Input = styled.input(

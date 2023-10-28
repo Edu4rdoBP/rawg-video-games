@@ -5,6 +5,7 @@ import '@/styles/globals.css';
 import { lato, poppins } from '@/fonts';
 import { Header } from '@/templates/Header';
 import Provider from '../../providers/providers';
+import Footer from '@/templates/Footer';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 interface LocaleLayoutProps {
@@ -38,9 +39,9 @@ export default async function RootLayout({
               <Header />
             </header>
             <main>{children}</main>
-            {/* <footer>
-                <Footer />
-              </footer> */}
+            <footer>
+              <Footer />
+            </footer>
           </Provider>
         </NextIntlClientProvider>
       </body>

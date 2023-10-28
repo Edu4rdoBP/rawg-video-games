@@ -15,7 +15,9 @@ export const MenuPaginate = styled.div(
   align-items: center;
   margin: 25px 0;
   select {
-    width: 12%;
+    max-width: 200px;
+    min-width: 120px;
+    width: 18%;
     height: 30px;
     text-align: center;
     background-color:${theme.secondary};
@@ -26,6 +28,7 @@ export const MenuPaginate = styled.div(
     option {
       color: ${theme.white};
     }
+
   }
 `,
 );
@@ -38,7 +41,7 @@ export const ReactPaginate = styled.div(
     justify-content: center;
     align-items: center;
     gap: 13px;
-    margin-top: 30px;
+    margin: 30px;
     .previous, .next {
       background-color: ${theme.primary};
       padding: 5px 18px;
@@ -76,6 +79,12 @@ export const ReactPaginate = styled.div(
 
     li:not(.previous):not(.next):not(.break):not(.active):hover {
       transform: translateY(-2px);
+    }
+
+    @media (max-width: 767px) {
+      li:not(.previous):not(.next) {
+        display: none; // Escondendo os elementos de paginação
+      }
     }
   }
 `,

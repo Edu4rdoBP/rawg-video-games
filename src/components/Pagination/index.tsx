@@ -63,7 +63,7 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
         <S.ReactPaginate className='font-big'>
           <ReactPaginate
             pageCount={pageCount}
-            pageRangeDisplayed={6}
+            pageRangeDisplayed={5}
             marginPagesDisplayed={1}
             previousLabel={'Anterior'}
             nextLabel={'Próximo'}
