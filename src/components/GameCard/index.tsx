@@ -1,5 +1,5 @@
 'use client';
-import { IGenres, IPlatformInfo } from '@/@types/Games';
+import { IGenres, IPlatformByGame } from '@/@types/Games';
 import Link from 'next/link';
 import * as S from './style';
 import Image from 'next/image';
@@ -15,7 +15,7 @@ interface IGameCard {
   name: string;
   backgroundImage: string;
   genres: IGenres[];
-  platforms: IPlatformInfo[];
+  platforms: IPlatformByGame[];
   metacritic: number;
 }
 export function GameCard({
@@ -26,7 +26,7 @@ export function GameCard({
   platforms,
   metacritic,
 }: IGameCard) {
-  const t = useTranslations('Game');
+  const t = useTranslations('Games');
   const theme = useTheme();
   return (
     <S.GameCard>
@@ -44,7 +44,7 @@ export function GameCard({
             <Genres data={genres} />
             <Badge
               label={String(metacritic)}
-              isSmall
+              isSmall={true}
               color='white'
               icon={<AiFillStar fill={theme.yellow} />}
             />

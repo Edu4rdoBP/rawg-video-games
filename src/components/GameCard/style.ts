@@ -22,6 +22,7 @@ export const ContentCard = styled.div(
   ({ theme }) => `
   padding: 20px 15px;
   background-color: ${theme.black};
+  height: 100%;
   h3 {
     margin: 0 0 10px 0;
   }
