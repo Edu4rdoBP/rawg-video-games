@@ -15,7 +15,7 @@ interface IGameCard {
   name: string;
   backgroundImage: string;
   genres: IGenres[];
-  platforms: IPlatformByGame[];
+  platforms?: IPlatformByGame[];
   metacritic: number;
 }
 export function GameCard({
@@ -39,17 +39,19 @@ export function GameCard({
           alt={t('altImage', { name: name })}
         />
         <S.ContentCard>
-          <h3>{name}</h3>
-          <div className='flex justify-between'>
-            <Genres data={genres} />
-            <Badge
-              label={String(metacritic)}
-              isSmall={true}
-              color='white'
-              icon={<AiFillStar fill={theme.yellow} />}
-            />
+          <div>
+            <h3>{name}</h3>
+            <div className='flex justify-between'>
+              <Genres data={genres} />
+              <Badge
+                label={String(metacritic)}
+                isSmall={true}
+                color='white'
+                icon={<AiFillStar fill={theme.yellow} />}
+              />
+            </div>
           </div>
-          <Platforms data={platforms} />
+          <Platforms t={t} data={platforms} />
         </S.ContentCard>
       </Link>
     </S.GameCard>

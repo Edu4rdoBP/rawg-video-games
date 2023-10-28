@@ -40,7 +40,7 @@ export interface IGameInfo {
   released: string;
   background_image: string;
   metacritic: number;
-  platforms: IPlatformByGame[];
+  platforms?: IPlatformByGame[];
   count?: number;
   genres: IGenres[];
 }
@@ -75,6 +75,8 @@ export interface IMetacriticPlatform {
 export interface IGameDetails extends IGameInfo {
   name_original: string;
   description: string;
+  developers?: IAuthors[];
+  distributor?: IAuthors[];
   metacritic_url: string;
   additions_count: number;
   metacritic_platforms: IMetacriticPlatform[];
@@ -83,7 +85,10 @@ export interface IGameDetails extends IGameInfo {
   screenshots_count: number;
 }
 
-export interface IPlatformList {
+export interface IAuthors {
   id: number;
-  image: string;
+  name: string;
+  slug: string;
+  games_count: 20;
+  image_background: string;
 }
