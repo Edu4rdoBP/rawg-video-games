@@ -16,7 +16,6 @@ interface InfoGameProps {
 export function InfoGame({ game }: InfoGameProps) {
   const theme = useTheme();
   const t = useTranslations('Games');
-  console.log(game);
   return (
     <S.Wrapper>
       <S.Description className='font-moderate'>

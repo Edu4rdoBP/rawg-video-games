@@ -14,11 +14,19 @@ export const useFindGames = (): {
   const [error, setError] = useState<Error | null>(null);
 
   const service: GameService = new GameService();
+  const rootStyles = document.documentElement.style;
 
   const fetchGameById = async (id: number): Promise<void> => {
     setLoading(true);
     try {
       const response = await service.fetchGameById(id);
+
+      const backgroundImage = response.background_image
+        ? response.background_image
+        : 'url(../../public/img/background2.jpg)';
+
+      rootStyles.setProperty('--background-image', `url(${backgroundImage})`);
+
       setGameDetail(response);
     } catch (error) {
       setGameDetail(undefined);

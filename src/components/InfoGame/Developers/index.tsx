@@ -9,15 +9,17 @@ interface IInfoProps extends ITranslateProps {
 
 export function Info({ data, t, label }: IInfoProps) {
   return (
-    <div className='flex gap-[10px]'>
+    <div className='infos'>
       <span className='uppercase'>{t(`info.${label}`)}</span>
-      {data &&
-        data.length > 0 &&
-        data.map((item) => {
-          return (
-            <S.Info key={`Info-item-${label}-${item.id}`}>{item.name}</S.Info>
-          );
-        })}
+      <div>
+        {data &&
+          data.length > 0 &&
+          data.map((item) => {
+            return (
+              <S.Info key={`Info-item-${label}-${item.id}`}>{item.name}</S.Info>
+            );
+          })}
+        </div>
     </div>
   );
 }

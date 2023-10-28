@@ -2,8 +2,9 @@
 import { useEffect } from 'react';
 
 import { useFindGames } from '@/hooks/useFindGame';
-import { useFindDLCs } from '@/hooks/useFindDlc';
 import { ListGamesDLCs } from '@/templates/ListDLCs';
+import { Main } from '@/styles/main';
+import { GameCover } from '@/components/GameCover';
 
 interface pageProps {
   params: { id: string };
@@ -11,27 +12,20 @@ interface pageProps {
 
 export default function DetailGame({ params }: pageProps) {
   const { gameDetail, fetchGameById } = useFindGames();
-  const { gameDLCs, fetchDLCs } = useFindDLCs();
-
   useEffect(() => {
     if (!gameDetail) {
       fetchGameById(Number(params.id));
     }
   }, [gameDetail, fetchGameById, params.id]);
 
-  useEffect(() => {
-    if (!gameDLCs) {
-      fetchDLCs({ gamePK: params.id });
-    }
-  }, [gameDLCs, fetchDLCs, params.id]);
-
   return (
-    <div>
+    <Main>
       <h1>{gameDetail?.name}</h1>
       <p>{gameDetail?.description}</p>
+      <GameCover image={gameDetail?.background_image} />
       <br></br>
       <br></br>
       <ListGamesDLCs id={params.id} />
-    </div>
+    </Main>
   );
 }
