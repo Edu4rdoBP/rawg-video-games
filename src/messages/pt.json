@@ -17,7 +17,14 @@
   },
   "Games": {
     "altImage": "Imagem da capa do jogo {name}",
-    "title": "Games"
+    "title": "Joos",
+    "availableIn": "Disponível em:",
+    "seeMore": "Veja mais",
+    "info": {
+      "release": "Data de lançamento: {date}",
+      "developer": "Desenvolvedor:",
+      "distributor": "Distribuidor:"
+    }
   },
   "Pagination": {
     "perPage": "por página"

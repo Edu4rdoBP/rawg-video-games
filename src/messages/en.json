@@ -17,7 +17,14 @@
   },
   "Games": {
     "altImage": "Game cover image {name}",
-    "title": "Games"
+    "title": "Games",
+    "seeMore": "More",
+    "info": {
+      "availableIn": "Available in:",
+      "release": "Release date: {date}",
+      "developer": "Developer:",
+      "distributor": "Distributor"
+    }
   },
   "Pagination": {
     "perPage": "per page"
