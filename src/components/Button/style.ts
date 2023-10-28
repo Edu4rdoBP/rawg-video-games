@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IButtonPropsLayout } from './type';
 
 export const CustomButton = styled.button(
   ({ theme }) => `
@@ -14,4 +15,14 @@ export const CustomButton = styled.button(
 `,
 );
 
-export const Button = styled.button``;
+
+export const Button = styled.button<IButtonPropsLayout>(
+  ({ theme, color }) => `
+    background-color: ${color ? theme[color] : theme.spaceGray};
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    font-family: var(--font-montserrat);
+    font-weight: 300;
+    letter-spacing: 0px;
+  `,
+);
