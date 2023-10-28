@@ -12,10 +12,6 @@ export const Wrapper = styled.div(
     gap: 6px;
     align-items: center;
   }
-  span {
-    margin-right: 5px;
-    text-decoration: underline;
-  }
 `,
 );
 

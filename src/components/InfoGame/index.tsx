@@ -19,14 +19,14 @@ export function InfoGame({ game }: InfoGameProps) {
   console.log(game);
   return (
     <S.Wrapper>
-      <S.Description>{game.description}</S.Description>
-      <div>
-        <div className='uppercase'>
+      <S.Description className='font-moderate'>{game.description}</S.Description>
+      <S.InfoData>
+        <div className='uppercase mb-2'>
           {t('info.release', { date: game.released })}
         </div>
         <Info label='developer' t={t} data={game.developers} />
         <Info label='distributor' t={t} data={game.distributor} />
-      </div>
+      </S.InfoData>
       <S.Statistics>
         <Genres data={game.genres}></Genres>
         <Badge
@@ -36,10 +36,10 @@ export function InfoGame({ game }: InfoGameProps) {
           icon={<AiFillStar fill={theme.yellow} />}
         />
       </S.Statistics>
-      <div className='flex justify-between align-center mt-4'>
+      <S.Media>
         <Platforms t={t} data={game.platforms} />
         <Link href={`/games/${game.id}`}>{t('seeMore')}</Link>
-      </div>
+      </S.Media>
     </S.Wrapper>
   );
 }

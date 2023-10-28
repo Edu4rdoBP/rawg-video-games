@@ -60,6 +60,10 @@ h6 {
   font-size: var(--font-size);
 }
 
+.font-moderate {
+  font-size: calc(var(--font-size) + 3px);
+}
+
 .font-big {
   font-size: calc(var(--font-size) + 6px);
 }

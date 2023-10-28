@@ -39,3 +39,18 @@ export const ContentCard = styled.div(
   }
 `,
 );
+
+export const Media = styled.div(({ theme }) => `
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    text-decoration: underline;
+    color: ${theme.textMuted};
+    &:hover {
+      color: ${theme.primary};
+    }
+  }
+`)
+
