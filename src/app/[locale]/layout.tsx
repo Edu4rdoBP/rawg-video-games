@@ -5,6 +5,8 @@ import '@/styles/globals.css';
 import { lato, poppins } from '@/fonts';
 import { Header } from '@/templates/Header';
 import Provider from '../../providers/providers';
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
 interface LocaleLayoutProps {
   children: ReactNode;
   params: {
@@ -21,19 +23,27 @@ export default async function RootLayout({
   children,
   params: { locale },
 }: LocaleLayoutProps) {
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
   return (
     <html lang={locale}>
-      <Provider locale={locale}>
-        <body className={`${lato.variable} ${poppins.variable} wrapper`}>
-          <header>
-            <Header />
-          </header>
-          <main>{children}</main>
-          {/* <footer>
+      <body className={`${lato.variable} ${poppins.variable} wrapper`}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Provider>
+            <header>
+              <Header />
+            </header>
+            <main>{children}</main>
+            {/* <footer>
                 <Footer />
               </footer> */}
-        </body>
-      </Provider>
+          </Provider>
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

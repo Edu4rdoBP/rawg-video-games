@@ -37,7 +37,7 @@ export function SearchBar() {
         <S.SearchIcon />
         <S.Input
           className='font-medium'
-          placeholder='Buscar jogo'
+          placeholder={t('placeholder')}
           type='text'
           name=''
           value={query}

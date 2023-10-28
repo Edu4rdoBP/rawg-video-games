@@ -7,13 +7,13 @@ interface IGenresProps {
 
 export function Genres({ data }: IGenresProps) {
   return (
-    <div className='flex gap-[4px]'>
+    <div className='flex gap-[4px] flex-wrap'>
       {data.map((item) => {
         return (
           <Badge
             label={item.name}
             color='primary'
-            isSmall
+            isSmall={true}
             key={`badger-${item.name}`}
           />
         );
