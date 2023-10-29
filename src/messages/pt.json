@@ -23,7 +23,7 @@
     "altImage": "Imagem da capa do jogo",
     "altPlatform": "Imagem da plataforma",
     "title": "Jogos",
-    "plataforms": "Plataformas:",
+    "platforms": "Plataformas:",
     "highlighted": "Jogo em destaque",
     "seeMore": "Veja mais",
     "DLC": "Jogos DLC",
@@ -31,12 +31,15 @@
     "dlcNotFound": "Esse jogo não possui DLC",
     "screenshots": "Screenshots",
     "info": {
+      "platforms": "Plataformas:",
       "release": "Data de lançamento: {date}",
       "developer": "Desenvolvedor:",
       "distributor": "Distribuidor:"
     }
   },
   "Pagination": {
-    "perPage": "por página"
+    "perPage": "por página",
+    "previous": "Anterior",
+    "next": "Próximo"
   }
 }

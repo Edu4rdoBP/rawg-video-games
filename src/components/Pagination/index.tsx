@@ -64,8 +64,8 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
             pageCount={pageCount}
             pageRangeDisplayed={5}
             marginPagesDisplayed={1}
-            previousLabel={'Anterior'}
-            nextLabel={'Próximo'}
+            previousLabel={t('Pagination.previous')}
+            nextLabel={t('Pagination.next')}
             breakLabel={'...'}
             onPageChange={handlePageClick}
             containerClassName={'pagination'}

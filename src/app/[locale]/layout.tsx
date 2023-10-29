@@ -18,7 +18,7 @@ interface LocaleLayoutProps {
 
 export const metadata: Metadata = {
   title: 'Get Over Here',
-  description: 'Games Plataform',
+  description: 'Games Platform',
 };
 
 export default async function RootLayout({

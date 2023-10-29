@@ -46,6 +46,8 @@ export const ReactPaginate = styled.div(
       background-color: ${theme.primary};
       padding: 5px 18px;
       border-radius: var(--border-radius);
+      min-width: 120px;
+      text-align: center;
       &:hover {
         filter: brightness(0.85);
         cursor: pointer;

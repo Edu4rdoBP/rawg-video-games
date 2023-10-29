@@ -30,13 +30,15 @@
     "dlcNotFound": "This game has no DLC",
     "screenshots": "Screenshots",
     "info": {
-      "plataforms": "Plataforms:",
+      "platforms": "Platforms:",
       "release": "Release date: {date}",
       "developer": "Developer:",
       "distributor": "Distributor"
     }
   },
   "Pagination": {
-    "perPage": "per page"
+    "perPage": "per page",
+    "previous": "Previous",
+    "next": "Next"
   }
 }
