@@ -1,4 +1,5 @@
 'use client';
+import { ContrastProvider } from '@/contexts/constrast';
 import { FontSizeProvider } from '@/contexts/font';
 import { defaultTheme } from '@/styles/theme';
 import { ReactNode } from 'react';
@@ -11,9 +12,11 @@ interface IProviderProps {
 export default function Provider({ children }: IProviderProps) {
   return (
     <>
-      <ThemeProvider theme={defaultTheme}>
-        <FontSizeProvider>{children}</FontSizeProvider>
-      </ThemeProvider>
+      <ContrastProvider>
+        <ThemeProvider theme={defaultTheme}>
+          <FontSizeProvider>{children}</FontSizeProvider>
+        </ThemeProvider>
+      </ContrastProvider>
     </>
   );
 }
