@@ -9,7 +9,7 @@ export const Wrapper = styled.div(
       width: 230px;
     }
   }
-`
+`,
 );
 
 export const Shots = styled.div(
@@ -40,5 +40,5 @@ export const Shots = styled.div(
       filter: brightness(0.8);
     }
   }
-`
+`,
 );

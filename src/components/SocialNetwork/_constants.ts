@@ -36,7 +36,7 @@ export const MenuItems: IItem[] = [
   {
     title: 'Logo Twitter',
     src: Twitter,
-    alt: 'Logo Linkedin',
+    alt: 'Logo Twitter',
     href: '/',
     size: 16,
   },
