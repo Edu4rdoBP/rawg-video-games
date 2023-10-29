@@ -4,6 +4,7 @@ import { useFindDLCs } from '@/hooks/useFindDlc';
 import { useEffect } from 'react';
 import * as S from './style';
 import { Tag } from '@/components/Tag';
+import { useTranslations } from 'use-intl';
 
 interface IpageProps {
   id: string;
@@ -11,6 +12,7 @@ interface IpageProps {
 
 export function ListGamesDLCs({ id }: IpageProps) {
   const { gameDLCs, fetchDLCs, loading } = useFindDLCs();
+  const t = useTranslations('Games');
 
   useEffect(() => {
     if (!gameDLCs && !loading) {
@@ -22,7 +24,7 @@ export function ListGamesDLCs({ id }: IpageProps) {
     <S.Wrapper>
       <div className='tag'>
         <Tag color='blur'>
-          <h2 className='font-big'>Game DLC</h2>
+          <h2 className='font-big'>{t('DLC')}</h2>
         </Tag>
       </div>
       <S.Cards>
@@ -30,7 +32,7 @@ export function ListGamesDLCs({ id }: IpageProps) {
           return (
             <GameCard
               id={item.id}
-              backgroundImage={item.background_image}
+              backgroundimage={item.background_image}
               genres={item.genres}
               metacritic={item.metacritic}
               name={item.name}

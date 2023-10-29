@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Description = styled.p(
+export const Description = styled.div(
   ({ theme }) => `
     color: ${theme.white};
     font-weight: 300;
@@ -57,7 +57,7 @@ export const InfoData = styled.div(
   ({ theme }) => `
   div {
     font-weight: 300;
-    font-size: calc(var(--font-size) - 2px);
+    font-size: calc(var(--font-size) );
   }
   span {
     color: ${theme.textMuted};
