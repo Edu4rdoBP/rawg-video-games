@@ -1,13 +1,15 @@
 import { useEffect } from 'react';
 import { MdContrast } from 'react-icons/md';
 
-import { ITranslateProps } from '@/@types/globals';
-import * as S from '@/components/AccessibleItems/AccessibleItems';
-import { Button } from '@/components/Button';
-import { useGlobalContext } from '@/contexts/Font';
+import * as S from './style';
+import { Button } from '../Button';
+import { useFontSizeContext } from '../../contexts/font';
+import { useTranslations } from 'next-intl';
 
-export default function AccessibleItems({ t }: ITranslateProps) {
-  const { fontSize, setFontSize } = useGlobalContext();
+export default function AccessibleItems() {
+  const { fontSize, setFontSize } = useFontSizeContext();
+  const t = useTranslations('Header');
+
   useEffect(() => {
     if (typeof document !== 'undefined') {
       const root = document.documentElement;

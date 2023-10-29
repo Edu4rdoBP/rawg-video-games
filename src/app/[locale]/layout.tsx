@@ -8,6 +8,7 @@ import Provider from '../../providers/providers';
 import Footer from '@/templates/Footer';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
+import { AccessibleHeader } from '@/templates/AccessibleHeader';
 interface LocaleLayoutProps {
   children: ReactNode;
   params: {
@@ -36,6 +37,7 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Provider>
             <header>
+              <AccessibleHeader />
               <Header />
             </header>
             <main>{children}</main>

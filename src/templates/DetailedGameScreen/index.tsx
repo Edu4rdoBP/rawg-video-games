@@ -10,7 +10,7 @@ import { useTheme } from 'styled-components';
 import { Button } from '@/components/Button';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import { BsArrowLeft } from 'react-icons/bs'
+import { BsArrowLeft } from 'react-icons/bs';
 
 interface IDetailedGameInfo {
   id: string;
@@ -20,12 +20,11 @@ export function DetailedGameInfo({ id }: IDetailedGameInfo) {
   const { gameDetail, fetchGameById } = useFindGames();
   const theme = useTheme();
   const t = useTranslations('Games');
-  const router = useRouter()
+  const router = useRouter();
 
   const GoBack = () => {
-    console.log('entrou')
     router.back();
-  }
+  };
 
   useEffect(() => {
     if (!gameDetail) {
@@ -35,7 +34,10 @@ export function DetailedGameInfo({ id }: IDetailedGameInfo) {
   return (
     gameDetail && (
       <S.Wrapper>
-        <Button color='primary' onClick={GoBack}><BsArrowLeft />{t('textButtonReturn')}</Button>
+        <Button color={theme.primary} onClick={GoBack}>
+          <BsArrowLeft />
+          {t('textButtonReturn')}
+        </Button>
         <S.Container>
           <GameCover image={gameDetail.background_image} />
           <S.Content>
@@ -43,11 +45,11 @@ export function DetailedGameInfo({ id }: IDetailedGameInfo) {
               <h1 className='font-xlarge m-0'>{gameDetail.name}</h1>
               <Badge
                 label={String(gameDetail.metacritic)}
-                color='white'
-                bgColor='blur'
+                color={theme.white}
+                bgColor={theme.blur}
                 icon={<AiFillStar fill={theme.yellow} />}
               />
-            </div>{' '}
+            </div>
             <InfoGame game={gameDetail} detailed />
           </S.Content>
         </S.Container>

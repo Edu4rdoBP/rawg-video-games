@@ -1,7 +1,7 @@
 'use client';
 import { ListGamesDLCs } from '@/templates/ListDLCs';
 import { Main } from '@/styles/main';
-import { DetailedGameInfo } from '@/templates/DetailedGameInfo';
+import { DetailedGameInfo } from '@/templates/DetailedGameScreen';
 import { ScreenshotList } from '@/templates/ScreenshotList';
 
 interface pageProps {
