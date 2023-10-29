@@ -20,9 +20,10 @@
   },
   "Games": {
     "altImage": "Imagem da capa do jogo {name}",
-    "title": "Joos",
+    "title": "Jogos",
     "availableIn": "Disponível em:",
     "seeMore": "Veja mais",
+    "DLC": "Jogos DLC",
     "info": {
       "release": "Data de lançamento: {date}",
       "developer": "Desenvolvedor:",

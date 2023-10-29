@@ -22,6 +22,7 @@
     "altImage": "Game cover image {name}",
     "title": "Games",
     "seeMore": "More",
+    "DLC": "Game DLC",
     "info": {
       "availableIn": "Available in:",
       "release": "Release date: {date}",
