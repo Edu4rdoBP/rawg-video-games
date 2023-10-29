@@ -2,6 +2,7 @@ export interface ISkeletonProps {
   type?: 'searchBarItem' | 'detailedCard';
 }
 
+//A component that displays a component replacement upon wait on request
 export default function Skeleton({ type }: ISkeletonProps) {
   const allSkeleton: { [key: string]: JSX.Element } = {
     searchBarItem: (
@@ -28,6 +29,25 @@ export default function Skeleton({ type }: ISkeletonProps) {
           </li>
         ))}
       </ul>
+    ),
+    gamesList: (
+      <div className='w-full flex flex-col'>
+        <ul className='flex flex-wrap justify-between align-center gap-[20px]'>
+          {[...Array(8)].map((movie, index) => (
+            <li
+              key={index}
+              className='relative animate-pulse max-w-[330px] w-full'
+            >
+              <div className='aspect-square h-[180px] w-full overflow-hidden rounded-lg bg-gray-300'></div>
+              <p className='mt-2 h-4 w-1/2 rounded-lg h-[22px] bg-gray-600'></p>
+              <p className='mt-2 block h-4 rounded-lg h-[22px] bg-gray-600 text-sm font-medium'></p>
+              <p className='mt-2 block h-4 rounded-lg h-[22px] bg-gray-600 text-sm font-medium'></p>
+              <p className='mt-2 block h-4 rounded-lg h-[22px] bg-gray-600 text-sm font-medium'></p>
+              <p className='mt-2 block h-4 rounded-lg h-[22px] bg-gray-600 text-sm font-medium'></p>
+            </li>
+          ))}
+        </ul>
+      </div>
     ),
   };
 
