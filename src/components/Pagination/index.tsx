@@ -18,6 +18,7 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
   const [itemsPerPage, setItemsPerPage] = useState<number>(selectValues[0]);
   const t = useTranslations();
   const count = games?.[0]?.count;
+  const pageCount = count ? Math.ceil(count / itemsPerPage) - 1 : 1;
 
   const handlePageClick = useCallback(
     (data: { selected: number }) => {
@@ -31,11 +32,6 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
     fetchGame({ page: currentPage + 1, page_size: value });
     setItemsPerPage(value);
   };
-
-  // const startIndex = currentPage * itemsPerPage;
-  // const endIndex = startIndex + itemsPerPage;
-  // const displayedNames = games?.slice(startIndex, endIndex);
-  const pageCount = count ? Math.ceil(count / itemsPerPage) - 1 : 1;
 
   return (
     <div accessKey='2'>
