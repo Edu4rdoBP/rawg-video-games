@@ -1,4 +1,4 @@
-import { FirstPage } from './games/page';
+import { InitialPage } from './games/page';
 export default function Index() {
-  return <FirstPage />;
+  return <InitialPage />;
 }
