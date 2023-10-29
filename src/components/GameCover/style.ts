@@ -11,6 +11,15 @@ export const VerticalCard = styled.div<IGameCover>(
   background-repeat: no-repeat;
   background-position: center;
   border-radius: calc(var(--border-radius) + 10px);
+
+  @media (max-width: 767px){
+    width: 82%;
+  }
+
+  @media (max-width: 510px){
+    width: 100%;
+    min-width: 0;
+  }
 `,
 );
 

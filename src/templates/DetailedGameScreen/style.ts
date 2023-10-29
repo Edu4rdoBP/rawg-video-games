@@ -7,7 +7,7 @@ export const Wrapper = styled.div(
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 40px;
+    margin: 40px 0 30px 0;
   }
 
   button:hover {
@@ -49,5 +49,9 @@ export const Content = styled.div`
       align-items: start;
       gap: 0;
     }
+  }
+
+  @media (max-width: 510px) {
+    width: 100%;
   }
 `;
