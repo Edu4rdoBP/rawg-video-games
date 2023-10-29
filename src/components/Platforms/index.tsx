@@ -14,7 +14,6 @@ export function Platforms({ data, t }: IPlatformsProps) {
         <p>{t('info.availableIn')}</p>
         {data?.map((item) => {
           const { slug } = item.platform;
-
           return platformsIcons.map((platform) => {
             if (slug.match(platform.name)) {
               return (

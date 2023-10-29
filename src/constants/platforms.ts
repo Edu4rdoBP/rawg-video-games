@@ -22,7 +22,7 @@ export const platformsIcons = [
     path: apple,
   },
   {
-    name: 'microsoft',
+    name: 'pc',
     path: windows,
   },
   {

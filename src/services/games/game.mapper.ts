@@ -26,7 +26,7 @@ export class GameHelper {
   static parseGameDetails(input: IGameDetailedInfoResponse): IGameDetails {
     return {
       name_original: input.name_original,
-      description: input.description_raw,
+      description: input.description,
       metacritic_url: input.metacritic_url,
       additions_count: input.additions_count,
       metacritic_platforms: input.metacritic_platforms,

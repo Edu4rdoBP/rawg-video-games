@@ -21,11 +21,11 @@ export const useFindGames = (): {
     try {
       const response = await service.fetchGameById(id);
 
-      const backgroundImage = response.background_image
+      const backgroundimage = response.background_image
         ? response.background_image
         : 'url(../../public/img/background2.jpg)';
 
-      rootStyles.setProperty('--background-image', `url(${backgroundImage})`);
+      rootStyles.setProperty('--background-image', `url(${backgroundimage})`);
 
       setGameDetail(response);
     } catch (error) {
