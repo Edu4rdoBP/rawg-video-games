@@ -38,7 +38,7 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
   const pageCount = count ? Math.ceil(count / itemsPerPage) - 1 : 1;
 
   return (
-    <div>
+    <div accessKey='2'>
       <S.MenuPaginate>
         <Tag>{t('Games.title')}</Tag>
         <select

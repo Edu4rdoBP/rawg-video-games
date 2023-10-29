@@ -4,7 +4,7 @@ import { MdContrast } from 'react-icons/md';
 import { ITranslateProps } from '@/@types/globals';
 import * as S from '@/components/AccessibleItems/AccessibleItems';
 import { Button } from '@/components/Button';
-import { useGlobalContext } from '@/contexts/font';
+import { useGlobalContext } from '@/contexts/Font';
 
 export default function AccessibleItems({ t }: ITranslateProps) {
   const { fontSize, setFontSize } = useGlobalContext();

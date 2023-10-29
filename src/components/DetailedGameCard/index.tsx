@@ -19,7 +19,7 @@ export function DetailedGameCard({ id }: IDetailedGameCardProps) {
   }, [fetchGameById, gameDetail, id, loading]);
 
   return gameDetail ? (
-    <div>
+    <div accessKey='1'>
       <div className='w-60 mb-[25px]'>
         <Tag color='blur'>Jogo em destaque</Tag>
       </div>
