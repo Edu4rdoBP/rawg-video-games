@@ -4,6 +4,7 @@ import * as S from './style';
 import Skeleton from '../../components/Skeleton';
 import { Tag } from '../../components/Tag';
 import { InfoGame } from '../../components/InfoGame';
+import { useTranslations } from 'next-intl';
 
 interface IDetailedGameCardProps {
   id: number;
@@ -11,6 +12,7 @@ interface IDetailedGameCardProps {
 
 export function DetailedGameCard({ id }: IDetailedGameCardProps) {
   const { gameDetail, fetchGameById, loading } = useFindGames();
+  const t = useTranslations("Games");
 
   useEffect(() => {
     if (!gameDetail && !loading) {
@@ -21,7 +23,7 @@ export function DetailedGameCard({ id }: IDetailedGameCardProps) {
   return gameDetail ? (
     <div accessKey='1'>
       <div className='w-60 mb-[25px]'>
-        <Tag color='blur'>Jogo em destaque</Tag>
+        <Tag color='blur'>{t('highlighted')}</Tag>
       </div>
       <S.Card>
         <S.BackgroundImage backgroundimage={gameDetail.background_image} />

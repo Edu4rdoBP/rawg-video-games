@@ -17,6 +17,7 @@ interface IGameCard {
   genres: IGenres[];
   platforms?: IPlatformByGame[];
   metacritic: number;
+  route?: string;
 }
 export function GameCard({
   id,
@@ -25,12 +26,13 @@ export function GameCard({
   genres,
   platforms,
   metacritic,
+  route = `/games/${id}`
 }: IGameCard) {
   const t = useTranslations('Games');
   const theme = useTheme();
   return (
     <S.GameCard>
-      <Link href={`/games/${id}`}>
+      <Link href={route}>
         <Image
           loader={() => backgroundimage || ``}
           src={backgroundimage || ``}

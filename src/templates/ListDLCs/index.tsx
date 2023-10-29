@@ -39,6 +39,7 @@ export function ListGamesDLCs({ id }: IpageProps) {
                 name={item.name}
                 platforms={item.platforms}
                 key={`game-card-${item.id}`}
+                route={`/additions/${item.id}`}
               />
             );
           })
