@@ -15,10 +15,9 @@ export const CustomButton = styled.button(
 `,
 );
 
-
 export const Button = styled.button<IButtonPropsLayout>(
   ({ theme, color }) => `
-    background-color: ${color ? theme[color] : theme.spaceGray};
+    background-color: ${color ? color : theme.blur};
     border-radius: var(--border-radius);
     padding: 10px 20px;
     font-family: var(--font-montserrat);

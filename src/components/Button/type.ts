@@ -1,7 +1,8 @@
+import { ITheme } from '@/styles/theme';
 import { MouseEventHandler, ReactNode } from 'react';
 
 export interface IButtonPropsLayout {
-  color?: string;
+  color?: ITheme;
 }
 
 export interface IButtonProps extends IButtonPropsLayout {
