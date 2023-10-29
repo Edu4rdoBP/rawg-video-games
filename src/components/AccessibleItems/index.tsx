@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { MdContrast } from 'react-icons/md';
 
-import { ITranslateProps } from '@/@types/Globals';
+import { ITranslateProps } from '@/@types/globals';
 import * as S from '@/components/AccessibleItems/AccessibleItems';
 import Button from '@/components/Button';
 import { useGlobalContext } from '@/contexts/Font';
@@ -29,7 +29,7 @@ export default function AccessibleItems({ t }: ITranslateProps) {
         <Button onClick={() => handleFontSize(-4)}>{t('decreaseFont')}</Button>
       </div>
       <div>
-        <Button onClick={() => { }}>
+        <Button onClick={() => {}}>
           <MdContrast />
           {t('contrast')}
         </Button>

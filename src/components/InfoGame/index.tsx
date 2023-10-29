@@ -1,4 +1,4 @@
-import { IGameDetails } from '@/@types/Games';
+import { IGameDetails } from '@/@types/games';
 import { Genres } from '../Genres';
 import { Badge } from '../Badge';
 import { useTheme } from 'styled-components';

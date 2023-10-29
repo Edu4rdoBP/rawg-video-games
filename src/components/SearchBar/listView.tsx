@@ -1,8 +1,8 @@
-import { IGameInfo } from '@/@types/Games';
+import { IGameInfo } from '@/@types/games';
 import Link from 'next/link';
 import Skeleton from '../Skeleton';
 import * as S from './style';
-import { ITranslateProps } from '@/@types/Globals';
+import { ITranslateProps } from '@/@types/globals';
 import Image from 'next/image';
 
 interface IProps extends ITranslateProps {

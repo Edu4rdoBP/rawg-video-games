@@ -1,6 +1,6 @@
 'use client';
 
-import { IGameInfo } from '@/@types/Games';
+import { IGameInfo } from '@/@types/games';
 import {
   createContext,
   useContext,

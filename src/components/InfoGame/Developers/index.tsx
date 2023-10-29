@@ -1,6 +1,6 @@
-import { IAuthors } from '@/@types/Games';
+import { IAuthors } from '@/@types/games';
 import * as S from '../style';
-import { ITranslateProps } from '@/@types/Globals';
+import { ITranslateProps } from '@/@types/globals';
 
 interface IInfoProps extends ITranslateProps {
   data?: IAuthors[];

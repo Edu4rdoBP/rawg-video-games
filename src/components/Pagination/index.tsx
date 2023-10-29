@@ -1,5 +1,5 @@
 'use client';
-import { IGameInfo, IGameInput } from '@/@types/Games';
+import { IGameInfo, IGameInput } from '@/@types/games';
 import React, { ReactNode, useCallback, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import * as S from './style';
@@ -35,7 +35,6 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
   // const startIndex = currentPage * itemsPerPage;
   // const endIndex = startIndex + itemsPerPage;
   // const displayedNames = games?.slice(startIndex, endIndex);
-  console.log(count);
   const pageCount = count ? Math.ceil(count / itemsPerPage) - 1 : 1;
 
   return (

@@ -1,9 +1,9 @@
 'use client';
-import { IPlatformByGame } from '@/@types/Games';
+import { IPlatformByGame } from '@/@types/games';
 import { platformsIcons } from '@/constants/platforms';
 import Image from 'next/image';
 import * as S from './style';
-import { ITranslateProps } from '@/@types/Globals';
+import { ITranslateProps } from '@/@types/globals';
 interface IPlatformsProps extends ITranslateProps {
   data?: IPlatformByGame[];
 }

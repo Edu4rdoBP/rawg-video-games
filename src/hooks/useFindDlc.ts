@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { IDLCsInput, IGameInfo } from '@/@types/Games';
+import { IDLCsInput, IGameInfo } from '@/@types/games';
 import { GameService } from '@/services/games/game.service';
 
 export const useFindDLCs = (): {

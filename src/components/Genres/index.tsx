@@ -1,4 +1,4 @@
-import { IGenres } from '@/@types/Games';
+import { IGenres } from '@/@types/games';
 import { Badge } from '../Badge';
 
 interface IGenresProps {

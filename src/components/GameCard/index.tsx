@@ -1,5 +1,5 @@
 'use client';
-import { IGenres, IPlatformByGame } from '@/@types/Games';
+import { IGenres, IPlatformByGame } from '@/@types/games';
 import Link from 'next/link';
 import * as S from './style';
 import Image from 'next/image';
