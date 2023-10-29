@@ -11,7 +11,7 @@ export function Platforms({ data, t }: IPlatformsProps) {
   return (
     <S.Wrapper className='font-small'>
       <div>
-        <p>{t('info.availableIn')}</p>
+        <p>{t('info.plataforms')}</p>
         {data?.map((item) => {
           const { slug } = item.platform;
           return platformsIcons.map((platform) => {

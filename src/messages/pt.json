@@ -23,9 +23,10 @@
     "altImage": "Imagem da capa do jogo {name}",
     "altPlatform": "Imagem da plataforma",
     "title": "Jogos",
-    "availableIn": "Disponível em:",
+    "plataforms": "Plataformas:",
     "seeMore": "Veja mais",
     "DLC": "Jogos DLC",
+    "textButtonReturn": "Voltar",
     "dlcNotFound": "Esse jogo não possui DLC",
     "screenshots": "Screenshots",
     "info": {

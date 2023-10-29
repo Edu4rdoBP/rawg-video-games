@@ -24,11 +24,12 @@
     "altPlatform": "Platform cover image",
     "title": "Games",
     "seeMore": "More",
+    "textButtonReturn": "Go back",
     "dlc": "Game DLC",
     "dlcNotFound": "This game has no DLC",
     "screenshots": "Screenshots",
     "info": {
-      "availableIn": "Available in:",
+      "plataforms": "Plataforms:",
       "release": "Release date: {date}",
       "developer": "Developer:",
       "distributor": "Distributor"
