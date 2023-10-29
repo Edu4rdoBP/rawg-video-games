@@ -19,6 +19,8 @@ interface IGameCard {
   metacritic: number;
   route?: string;
 }
+
+//Game Card Layout
 export function GameCard({
   id,
   name,
@@ -26,7 +28,7 @@ export function GameCard({
   genres,
   platforms,
   metacritic,
-  route = `/games/${id}`
+  route = `/games/${id}`,
 }: IGameCard) {
   const t = useTranslations('Games');
   const theme = useTheme();

@@ -1,13 +1,14 @@
 'use client';
-import { ListGamesDLCs } from '@/templates/ListDLCs';
+import { ListGamesDLCs } from '@/templates/ListGamesDLCs';
 import { Main } from '@/styles/main';
-import { DetailedGameInfo } from '@/templates/DetailedGameScreen';
 import { ScreenshotList } from '@/templates/ScreenshotList';
+import { DetailedGameInfo } from '@/templates/DetailedGameInfo';
 
 interface pageProps {
   params: { id: string };
 }
 
+//Game details screen
 export default function DetailGame({ params }: pageProps) {
   return (
     <Main>

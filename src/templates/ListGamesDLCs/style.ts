@@ -9,7 +9,6 @@ export const Wrapper = styled.div(
       width: 200px;
     }
   }
-
 `,
 );
 

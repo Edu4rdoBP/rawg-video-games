@@ -1,15 +1,16 @@
 'use client';
-import { DetailedGameCard } from "@/components/DetailedGameCard";
-import { Main } from "@/styles/main";
+import { Main } from '@/styles/main';
+import { DetailedGameCard } from '@/templates/DetailedGameCard';
 
 interface IDLCScreen {
-    params: { dlc: number }
+  params: { dlc: number };
 }
 
+//DLC Details screen
 export default function DLCGame({ params }: IDLCScreen) {
-    return (
-        <Main>
-            <DetailedGameCard id={params.dlc} />
-        </Main>
-    );
+  return (
+    <Main>
+      <DetailedGameCard id={params.dlc} />
+    </Main>
+  );
 }

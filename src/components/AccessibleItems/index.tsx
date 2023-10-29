@@ -5,9 +5,12 @@ import * as S from './style';
 import { Button } from '../Button';
 import { useFontSizeContext } from '../../contexts/font';
 import { useTranslations } from 'next-intl';
+import { useContrast } from '@/contexts/constrast';
 
-export default function AccessibleItems() {
+//Accessibility menus
+export function AccessibleItems() {
   const { fontSize, setFontSize } = useFontSizeContext();
+  const { toggleTheme } = useContrast();
   const t = useTranslations('Header');
 
   useEffect(() => {
@@ -17,12 +20,14 @@ export default function AccessibleItems() {
     }
   }, [fontSize]);
 
+  //Change the font globally with a trigger
   const handleFontSize = (value: number) => {
     const newFont = fontSize + value;
     if (newFont >= 16 && newFont < 32) {
       setFontSize(newFont);
     }
   };
+
   return (
     <S.AccessibleItems className='font-medium'>
       <div>
@@ -31,7 +36,7 @@ export default function AccessibleItems() {
         <Button onClick={() => handleFontSize(-4)}>{t('decreaseFont')}</Button>
       </div>
       <div>
-        <Button onClick={() => {}}>
+        <Button onClick={toggleTheme}>
           <MdContrast />
           {t('contrast')}
         </Button>

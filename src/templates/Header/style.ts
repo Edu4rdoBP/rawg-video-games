@@ -11,4 +11,3 @@ export const Wrapper = styled.div`
     gap: 25px;
   }
 `;
-

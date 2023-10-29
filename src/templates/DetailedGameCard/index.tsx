@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import * as S from './style';
 import Skeleton from '../../components/Skeleton';
 import { Tag } from '../../components/Tag';
-import { InfoGame } from '../../components/InfoGame';
+import { InfoGame } from '../../components/GameMetadata';
 import { useTranslations } from 'next-intl';
 
 interface IDetailedGameCardProps {
@@ -12,7 +12,7 @@ interface IDetailedGameCardProps {
 
 export function DetailedGameCard({ id }: IDetailedGameCardProps) {
   const { gameDetail, fetchGameById, loading } = useFindGames();
-  const t = useTranslations("Games");
+  const t = useTranslations('Games');
 
   useEffect(() => {
     if (!gameDetail && !loading) {

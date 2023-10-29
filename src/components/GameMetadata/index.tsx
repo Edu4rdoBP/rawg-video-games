@@ -37,7 +37,7 @@ export function InfoGame({ game, detailed }: InfoGameProps) {
             label={String(game.metacritic)}
             size={'big'}
             color={theme.white}
-            bgColor={theme.blur}
+            bgcolor={theme.blur}
             icon={<AiFillStar fill={theme.yellow} />}
           />
         )}

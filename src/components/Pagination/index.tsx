@@ -12,6 +12,7 @@ interface IPaginationProps {
   children: ReactNode;
 }
 
+//Pagination component
 export function Pagination({ games, fetchGame, children }: IPaginationProps) {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const selectValues = [8, 16, 32, 60];
@@ -20,6 +21,7 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
   const count = games?.[0]?.count;
   const pageCount = count ? Math.ceil(count / itemsPerPage) - 1 : 1;
 
+  //Executes a new request when paging indexes are touched
   const handlePageClick = useCallback(
     (data: { selected: number }) => {
       setCurrentPage(data.selected);
@@ -28,6 +30,7 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
     [fetchGame, itemsPerPage],
   );
 
+  //Executes a new request when indexes per page are changed
   const handlePageChangeSize = (value: number) => {
     fetchGame({ page: currentPage + 1, page_size: value });
     setItemsPerPage(value);

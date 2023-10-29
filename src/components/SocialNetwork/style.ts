@@ -12,8 +12,8 @@ export const SocialNetworks = styled.div`
 
   @media (max-width: 767px) {
     justify-content: center;
-    
+
     div:last-child{
       justify-content: center;
     }
-`
+`;

@@ -11,13 +11,12 @@ export const SocialNetworks = () => {
   return (
     <S.SocialNetworks>
       {menuItems.map((item) => (
-        <Link href={item.href} target='_blank' key={item.title}>
+        <Link href={item.href} target='_blank' key={`item-logo-${item.title}`}>
           <Image
             src={item.src}
             alt={item.alt}
             width={item.size}
             height={item.size}
-            loading='lazy'
           />
         </Link>
       ))}

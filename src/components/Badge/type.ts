@@ -4,7 +4,7 @@ import { ReactNode } from 'react';
 export interface IBadgePropsLayout {
   size?: 'small' | 'big';
   color: ITheme;
-  bgColor?: ITheme;
+  bgcolor?: ITheme;
 }
 
 export interface IBadgeProps extends IBadgePropsLayout {

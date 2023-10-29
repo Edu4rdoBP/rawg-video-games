@@ -17,8 +17,10 @@ export function SearchBar() {
     fetchGames({ search: query });
   };
 
-  const timerRef = useRef<NodeJS.Timeout | null>(setTimeout(() => {}, 0));
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
+  //Apply a timer before making the request
+  //Ensures that the request will only be made at the end of typing
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
 
@@ -47,7 +49,8 @@ export function SearchBar() {
           }}
           onBlur={() => {
             setTimeout(async () => {
-              setQuery(''), setFocus(false);
+              setQuery('');
+              setFocus(false);
             }, 150);
           }}
         />

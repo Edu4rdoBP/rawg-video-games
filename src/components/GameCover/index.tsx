@@ -2,6 +2,7 @@
 import * as S from './style';
 import { IGameCover } from './type';
 
+//Game cover layout
 export function GameCover({ image, direction }: IGameCover) {
   const allCards: { [key: string]: JSX.Element } = {
     vertical: <S.VerticalCard image={image}></S.VerticalCard>,

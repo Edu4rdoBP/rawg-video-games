@@ -6,6 +6,7 @@ interface IGenresProps {
   data: IGenres[];
 }
 
+//List of genres
 export function Genres({ data }: IGenresProps) {
   const theme = useTheme();
   return (

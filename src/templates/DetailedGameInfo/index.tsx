@@ -3,7 +3,7 @@ import { useFindGames } from '@/hooks/useFindGame';
 import { useEffect } from 'react';
 import * as S from './style';
 import { GameCover } from '@/components/GameCover';
-import { InfoGame } from '@/components/InfoGame';
+import { InfoGame } from '@/components/GameMetadata';
 import { Badge } from '@/components/Badge';
 import { AiFillStar } from 'react-icons/ai';
 import { useTheme } from 'styled-components';
@@ -46,7 +46,7 @@ export function DetailedGameInfo({ id }: IDetailedGameInfo) {
               <Badge
                 label={String(gameDetail.metacritic)}
                 color={theme.white}
-                bgColor={theme.blur}
+                bgcolor={theme.blur}
                 icon={<AiFillStar fill={theme.yellow} />}
               />
             </div>
