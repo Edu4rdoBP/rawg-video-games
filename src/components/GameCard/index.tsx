@@ -37,6 +37,7 @@ export function GameCard({
       <Link href={route}>
         <Image
           loader={() => backgroundimage || ``}
+          unoptimized={true}
           src={backgroundimage || ``}
           width={100}
           height={200}

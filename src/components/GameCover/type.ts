@@ -1,5 +1,5 @@
 export interface IGameCover extends IGameLayout {
-  image?: string;
+  url?: string;
 }
 
 export interface IGameLayout {

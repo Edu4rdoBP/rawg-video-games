@@ -11,7 +11,7 @@ export function Info({ data, t, label }: IInfoProps) {
   return (
     <div className='infos'>
       <span className='uppercase'>{t(`info.${label}`)}</span>
-      <div className='flex gap-[15backgroundImagepx]'>
+      <div className='flex gap-[15px]'>
         {data &&
           data.length > 0 &&
           data.map((item) => {

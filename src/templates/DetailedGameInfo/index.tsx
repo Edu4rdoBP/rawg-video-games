@@ -39,7 +39,7 @@ export function DetailedGameInfo({ id }: IDetailedGameInfo) {
           {t('textButtonReturn')}
         </Button>
         <S.Container>
-          <GameCover image={gameDetail.background_image} />
+          <GameCover url={gameDetail.background_image} />
           <S.Content>
             <div className='title'>
               <h1 className='font-xlarge m-0'>{gameDetail.name}</h1>

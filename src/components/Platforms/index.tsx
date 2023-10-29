@@ -1,6 +1,6 @@
 'use client';
 import { IPlatformByGame } from '@/@types/games';
-import { platformsIcons } from '@/constants/platforms';
+import { platformsIcons } from '../../constants/platforms';
 import Image from 'next/image';
 import * as S from './style';
 import { ITranslateProps } from '@/@types/globals';

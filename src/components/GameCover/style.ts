@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { IGameCover } from './type';
 
 export const VerticalCard = styled.div<IGameCover>(
-  ({ image }) => `
+  ({ url }) => `
   width: 25%;
   min-width: 360px;
   height: 500px;
-  background-image: url(${image});
+  background-image: url(${url});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,11 +24,11 @@ export const VerticalCard = styled.div<IGameCover>(
 );
 
 export const HorizontalCard = styled.div<IGameCover>(
-  ({ image }) => `
+  ({ url }) => `
   width: 60%;
   min-width: 460px;
   height: 230px;
-  background-image: url(${image});
+  background-image: url(${url});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

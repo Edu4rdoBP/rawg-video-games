@@ -31,7 +31,7 @@ export function ScreenshotList({ id }: IpageProps) {
           return (
             <GameCover
               direction='horizontal'
-              image={item.image}
+              url={item.image}
               key={`game-card-${item.id}`}
             />
           );
