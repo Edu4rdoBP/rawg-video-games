@@ -1,7 +1,7 @@
 :root {
   --font-size: 16px;
   --border-radius: 10px;
-  --background-image: url('');
+  --background-image: '';
 }
 
 @tailwind base;
