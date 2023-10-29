@@ -3,7 +3,7 @@ import {
   IGenres,
   IMetacriticPlatform,
   IPlatformByGame,
-} from '@/@types/Games';
+} from '@/@types/games';
 
 interface ESRBRating {
   id: number;
@@ -39,7 +39,7 @@ export interface IGeneralInfo {
   count: number;
   next: string | undefined;
   previous: string | undefined;
-  results: IGameInfoResponse[] | IPlatformListResponse[];
+  results: IGameInfoResponse[];
 }
 
 export interface IGameDetailedInfoResponse extends IGameInfoResponse {
@@ -71,13 +71,10 @@ export interface IGameDetailedInfoResponse extends IGameInfoResponse {
   creators_count: number;
 }
 
-export interface IPlatformListResponse {
+export interface IScreenshotResponse {
+  image: string;
+  hidden: boolean;
   id: number;
-  name: string;
-  slug: string;
-  games_count: number;
-  image_background: string;
-  image?: string | null;
-  year_start?: number | null;
-  year_end?: number | null;
+  width: number;
+  height: number;
 }

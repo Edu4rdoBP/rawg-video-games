@@ -1,4 +1,4 @@
-import { ITranslateProps } from '../../@types/Globals';
+import { ITranslateProps } from '../../@types/globals';
 
 export interface IHeaderProps {
   type?: 'home' | 'default';

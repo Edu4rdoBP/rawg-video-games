@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   width: 60%;
+  height: 100%;
   .title {
     margin-bottom: 30px;
     display: flex;

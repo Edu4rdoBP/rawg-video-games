@@ -7,7 +7,9 @@ import {
   IGameDetails,
   IGameInfo,
   IGameInput,
-} from '@/@types/Games';
+  IScreenshot,
+  IScreenshotInput,
+} from '@/@types/games';
 
 export class GameService implements IGameService {
   private _client: GameClient;
@@ -29,5 +31,10 @@ export class GameService implements IGameService {
   async fetchDLCs(input: IDLCsInput): Promise<IGameInfo[]> {
     const response = await this._client.getDLCs(input);
     return GameHelper.parseGameInfo(response);
+  }
+
+  async fetchScreenshot(input: IScreenshotInput): Promise<IScreenshot[]> {
+    const response = await this._client.getScreenshots(input);
+    return GameHelper.parseScreenshot(response);
   }
 }

@@ -1,8 +1,12 @@
 import { DateFormatter } from '@/utils/dateFormatter';
 import axiosClient from '../api';
-import { IGameDetailedInfoResponse, IGeneralInfo } from './raw.type';
+import {
+  IGameDetailedInfoResponse,
+  IGeneralInfo,
+  IScreenshotResponse,
+} from './raw.type';
 
-import { IDLCsInput, IGameInput } from '@/@types/Games';
+import { IDLCsInput, IGameInput, IScreenshotInput } from '@/@types/games';
 
 export class GameClient {
   async getGameById(id: number): Promise<IGameDetailedInfoResponse> {
@@ -25,12 +29,21 @@ export class GameClient {
     const response = await axiosClient.get(
       `/api/games/${input.gamePK}/additions`,
       {
-        params: {
-          page: input.page,
-          page_size: input.page_size,
-        },
+        params: input,
       },
     );
     return response.data;
+  }
+
+  async getScreenshots(
+    input: IScreenshotInput,
+  ): Promise<IScreenshotResponse[]> {
+    const response = await axiosClient.get(
+      `api/games/${input.gamePK}/screenshots`,
+      {
+        params: input,
+      },
+    );
+    return response.data.results;
   }
 }

@@ -22,7 +22,9 @@
     "altImage": "Game cover image {name}",
     "title": "Games",
     "seeMore": "More",
-    "DLC": "Game DLC",
+    "dlc": "Game DLC",
+    "dlcNotFound": "This game has no DLC",
+    "screenshots": "Screenshots",
     "info": {
       "availableIn": "Available in:",
       "release": "Release date: {date}",

@@ -10,6 +10,11 @@ export interface IDLCsInput extends IPageInput {
   gamePK: string;
 }
 
+export interface IScreenshotInput extends IPageInput {
+  gamePK: string;
+  ordering?: string;
+}
+
 export interface IGameInput extends IPageInput {
   search?: string;
   search_precise?: boolean;
@@ -61,6 +66,11 @@ export interface IPlatformByGame {
   };
   released_at: string;
   requirements: IRequirements;
+}
+
+export interface IScreenshot {
+  image: string;
+  id: number;
 }
 interface IRequirements {
   minimum: string;

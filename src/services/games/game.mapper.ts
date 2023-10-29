@@ -1,7 +1,11 @@
 import { DateFormatter } from '@/utils/dateFormatter';
-import { IGameDetailedInfoResponse, IGeneralInfo } from './raw.type';
+import {
+  IGameDetailedInfoResponse,
+  IGeneralInfo,
+  IScreenshotResponse,
+} from './raw.type';
 
-import { IGameDetails, IGameInfo } from '@/@types/Games';
+import { IGameDetails, IGameInfo, IScreenshot } from '@/@types/games';
 
 export class GameHelper {
   static parseGameInfo(input: IGeneralInfo): IGameInfo[] {
@@ -38,9 +42,20 @@ export class GameHelper {
       released: DateFormatter.convertDate(input.released),
       background_image: input.background_image,
       metacritic: input.rating,
-      platforms: input.platforms,
+      platforms: input.parent_platforms,
       genres: input.genres,
       developers: input.developers,
     };
+  }
+
+  static parseScreenshot(input: IScreenshotResponse[]): IScreenshot[] {
+    const result: IScreenshot[] = [];
+    input.map((item) => {
+      result.push({
+        image: item.image,
+        id: item.id,
+      });
+    });
+    return result;
   }
 }
