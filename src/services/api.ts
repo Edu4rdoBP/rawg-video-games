@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiKey = process.env.API_KEY;
+const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
 const axiosClient = axios.create({
   baseURL: 'https://api.rawg.io',
@@ -10,7 +10,7 @@ axiosClient.interceptors.request.use(
   (config) => {
     config.params = {
       ...config.params,
-      key: 'd38447171586476cac7323c4235167d4',
+      key: apiKey,
     };
     return config;
   },
