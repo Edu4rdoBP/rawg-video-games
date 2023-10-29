@@ -79,5 +79,10 @@ export const Media = styled.div(
       color: ${theme.primary};
     }
   }
+  @media(max-width: 375px) {
+    a {
+      margin-left: 8px;
+    }
+  }
 `,
 );

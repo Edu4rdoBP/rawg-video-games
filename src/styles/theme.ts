@@ -21,7 +21,7 @@ export const defaultTheme: ITheme = {
   black: '#0F0F0F',
   spaceGray: '#282431',
   yellow: '#CCE235',
-  blur: 'rgba(255, 255, 255, 0.05)',
+  blur: 'rgba(255, 255, 255, 0.08)',
 };
 
 export const contrastTheme: ITheme = {

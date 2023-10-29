@@ -57,7 +57,7 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
         </select>
       </S.MenuPaginate>
       <S.Content>
-        <div className='flex flex-wrap gap-[20px] justify-between'>
+        <div className='flex flex-wrap gap-[20px] justify-center'>
           {children}
         </div>
         <S.ReactPaginate className='font-big'>

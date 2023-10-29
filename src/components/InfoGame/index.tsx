@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 interface InfoGameProps {
   game: IGameDetails;
-  detailed: boolean;
+  detailed?: boolean;
 }
 
 export function InfoGame({ game, detailed }: InfoGameProps) {

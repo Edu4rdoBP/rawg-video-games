@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const GameCard = styled.div`
-  flex: 1 0 25%;
+  flex: 1 0 20%;
   box-sizing: border-box;
   display: flex;
   max-width: 330px;
@@ -37,6 +37,10 @@ export const ContentCard = styled.div(
   justify-content: space-between;
   h3 {
     margin: 0 0 10px 0;
+  }
+  @media(max-width: 767px) {
+    height: 100%;
+    justify-content: start;
   }
 `,
 );
