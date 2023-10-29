@@ -35,7 +35,6 @@ export const Shots = styled.div(
   }
   div {
     transition: all 0.2s ease-in-out;
-    cursor: pointer;
     &:hover {
       filter: brightness(0.8);
     }

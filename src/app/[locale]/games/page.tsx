@@ -6,7 +6,7 @@ import { DetailedGameCard } from '@/templates/DetailedGameCard';
 export function InitialPage() {
   return (
     <S.Main>
-      <DetailedGameCard id={960873} />
+      <DetailedGameCard ishome id={960873} />
       <ListGames />
     </S.Main>
   );

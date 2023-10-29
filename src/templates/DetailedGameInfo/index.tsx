@@ -34,7 +34,7 @@ export function DetailedGameInfo({ id }: IDetailedGameInfo) {
   return (
     gameDetail && (
       <S.Wrapper>
-        <Button color={theme.primary} onClick={GoBack}>
+        <Button color={'primary'} onClick={GoBack}>
           <BsArrowLeft />
           {t('textButtonReturn')}
         </Button>

@@ -16,12 +16,20 @@ export const CustomButton = styled.button(
 );
 
 export const Button = styled.button<IButtonPropsLayout>(
-  ({ color }) => `
-    background-color: ${color ? color : 'transparent'};
+  ({ color, theme }) => `
+    background-color: ${color ? theme[color] : 'transparent'};
     border-radius: var(--border-radius);
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
     font-family: var(--font-montserrat);
     font-weight: 300;
     letter-spacing: 0px;
+    &:hover {
+      filter: brightness(0.85);
+      transition: 0.3s ease;
+    }
   `,
 );
