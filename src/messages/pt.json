@@ -9,6 +9,34 @@
     "findYourGames": "Encontre seu jogo",
     "accessibility": {
       "logo": ""
+    },
+    "searchBar": {
+      "noGameFound": "Nenhum título encontrado",
+      "placeholder": "Buscar jogo",
+      "altImage": "Imagem da capa do jogo na barra de pesquisa"
     }
+  },
+  "Footer": {
+    "disclaimer": "Get Over Here 2023 Todos os direitos reservados."
+  },
+  "Games": {
+    "altImage": "Imagem da capa do jogo",
+    "altPlatform": "Imagem da plataforma",
+    "title": "Jogos",
+    "plataforms": "Plataformas:",
+    "highlighted": "Jogo em destaque",
+    "seeMore": "Veja mais",
+    "DLC": "Jogos DLC",
+    "textButtonReturn": "Voltar",
+    "dlcNotFound": "Esse jogo não possui DLC",
+    "screenshots": "Screenshots",
+    "info": {
+      "release": "Data de lançamento: {date}",
+      "developer": "Desenvolvedor:",
+      "distributor": "Distribuidor:"
+    }
+  },
+  "Pagination": {
+    "perPage": "por página"
   }
 }

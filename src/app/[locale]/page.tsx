@@ -1,9 +1,4 @@
-'use client';
-
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
-
+import { InitialPage } from './games/page';
 export default function Index() {
-  return <div></div>;
+  return <InitialPage />;
 }

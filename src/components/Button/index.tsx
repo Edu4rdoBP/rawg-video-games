@@ -1,11 +1,10 @@
-import { IButtonProps } from '@/@types/Button';
-import * as S from '@/styles/button';
+import * as S from './style';
+import { IButtonProps } from './type';
 
-export default function Button({ children, onClick, type }: IButtonProps) {
-  const allButtons: { [key: string]: JSX.Element } = {
-    default: <S.Button onClick={onClick}>{children}</S.Button>,
-    customButton: <S.CustomButton onClick={onClick}>{children}</S.CustomButton>,
-  };
-
-  return <>{type ? allButtons[type] : allButtons['default']}</>;
+export function Button({ color, children, onClick }: IButtonProps) {
+  return (
+    <S.Button onClick={onClick} color={color}>
+      {children}
+    </S.Button>
+  );
 }

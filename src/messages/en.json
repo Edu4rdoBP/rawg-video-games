@@ -9,6 +9,34 @@
     "findYourGames": "Find your game",
     "accessibility": {
       "logo": ""
+    },
+    "searchBar": {
+      "noGameFound": "No titles found",
+      "placeholder": "Search game",
+      "altImage": "Game cover image in search bar"
     }
+  },
+  "Footer": {
+    "disclaimer": "Get Over Here 2023 All rights reserved."
+  },
+  "Games": {
+    "altImage": "Game cover image",
+    "altPlatform": "Platform cover image",
+    "title": "Games",
+    "seeMore": "More",
+    "highlighted": "Featured game",
+    "textButtonReturn": "Go back",
+    "dlc": "Game DLC",
+    "dlcNotFound": "This game has no DLC",
+    "screenshots": "Screenshots",
+    "info": {
+      "plataforms": "Plataforms:",
+      "release": "Release date: {date}",
+      "developer": "Developer:",
+      "distributor": "Distributor"
+    }
+  },
+  "Pagination": {
+    "perPage": "per page"
   }
 }
