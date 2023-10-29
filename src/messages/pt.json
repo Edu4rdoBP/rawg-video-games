@@ -13,14 +13,14 @@
     "searchBar": {
       "noGameFound": "Nenhum título encontrado",
       "placeholder": "Buscar jogo",
-      "altImage": "Imagem da capa do jogo {name} na barra de pesquisa"
+      "altImage": "Imagem da capa do jogo na barra de pesquisa"
     }
   },
   "Footer": {
     "disclaimer": "Get Over Here 2023 Todos os direitos reservados."
   },
   "Games": {
-    "altImage": "Imagem da capa do jogo {name}",
+    "altImage": "Imagem da capa do jogo",
     "altPlatform": "Imagem da plataforma",
     "title": "Jogos",
     "plataforms": "Plataformas:",
