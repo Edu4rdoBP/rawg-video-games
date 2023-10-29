@@ -18,7 +18,12 @@ export function Platforms({ data, t }: IPlatformsProps) {
             if (slug.match(platform.name)) {
               return (
                 <S.Icon key={item.platform.slug}>
-                  <Image src={platform.path} width={10} height={10} alt='' />
+                  <Image
+                    src={platform.path}
+                    width={10}
+                    height={10}
+                    alt={t('altImage')}
+                  />
                 </S.Icon>
               );
             }

@@ -12,7 +12,8 @@
     },
     "searchBar": {
       "noGameFound": "No titles found",
-      "placeholder": "Search game"
+      "placeholder": "Search game",
+      "altImage": "Game cover image in search bar"
     }
   },
   "Footer": {
@@ -20,6 +21,7 @@
   },
   "Games": {
     "altImage": "Game cover image {name}",
+    "altPlatform": "Platform cover image",
     "title": "Games",
     "seeMore": "More",
     "dlc": "Game DLC",

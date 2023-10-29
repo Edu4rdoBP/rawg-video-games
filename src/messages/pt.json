@@ -12,7 +12,8 @@
     },
     "searchBar": {
       "noGameFound": "Nenhum título encontrado",
-      "placeholder": "Buscar jogo"
+      "placeholder": "Buscar jogo",
+      "altImage": "Imagem da capa do jogo {name} na barra de pesquisa"
     }
   },
   "Footer": {
@@ -20,6 +21,7 @@
   },
   "Games": {
     "altImage": "Imagem da capa do jogo {name}",
+    "altPlatform": "Imagem da plataforma",
     "title": "Jogos",
     "availableIn": "Disponível em:",
     "seeMore": "Veja mais",
