@@ -24,23 +24,27 @@ export function ListGamesDLCs({ id }: IpageProps) {
     <S.Wrapper>
       <div className='tag'>
         <Tag color='blur'>
-          <h2 className='font-big'>{t('DLC')}</h2>
+          <h2 className='font-big'>{t('dlc')}</h2>
         </Tag>
       </div>
       <S.Cards>
-        {gameDLCs?.map((item) => {
-          return (
-            <GameCard
-              id={item.id}
-              backgroundimage={item.background_image}
-              genres={item.genres}
-              metacritic={item.metacritic}
-              name={item.name}
-              platforms={item.platforms}
-              key={`game-card-${item.id}`}
-            />
-          );
-        })}
+        {gameDLCs && gameDLCs.length > 0 ? (
+          gameDLCs.map((item) => {
+            return (
+              <GameCard
+                id={item.id}
+                backgroundimage={item.background_image}
+                genres={item.genres}
+                metacritic={item.metacritic}
+                name={item.name}
+                platforms={item.platforms}
+                key={`game-card-${item.id}`}
+              />
+            );
+          })
+        ) : (
+          <div>{t('dlcNotFound')}</div>
+        )}
       </S.Cards>
     </S.Wrapper>
   );
