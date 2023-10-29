@@ -17,7 +17,7 @@ export const Wrapper = styled.div(
 
 export const Icon = styled.div`
   img {
-    width: 15px;
-    height: 15px;
+    width: 15px !important;
+    height: 15px !important;
   }
 `;

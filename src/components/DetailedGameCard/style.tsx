@@ -31,7 +31,7 @@ export const BackgroundImage = styled.div<IBackgroundImage>(
   ({ backgroundimage }) => `
   background-image: url('${backgroundimage}');
   background-repeat: no-repeat;
-  background-size: 155%;
+  background-size: cover;
   background-position: center;
   min-width: 57%;
   min-height: 300px;
