@@ -35,8 +35,9 @@ export function InfoGame({ game, detailed }: InfoGameProps) {
         {!detailed && (
           <Badge
             label={String(game.metacritic)}
-            issmall={true}
-            color='white'
+            size={'big'}
+            color={theme.white}
+            bgColor={theme.blur}
             icon={<AiFillStar fill={theme.yellow} />}
           />
         )}

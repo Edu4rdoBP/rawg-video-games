@@ -36,8 +36,9 @@ export function GameCard({
           src={backgroundimage || ``}
           width={100}
           height={200}
-          alt={t('altImage', { name: name })}
+          alt={t('altImage')}
         />
+
         <S.ContentCard>
           <div>
             <h3>{name}</h3>
@@ -45,8 +46,8 @@ export function GameCard({
               <Genres data={genres} />
               <Badge
                 label={String(metacritic)}
-                issmall={true}
-                color='white'
+                size={'small'}
+                color={theme.white}
                 icon={<AiFillStar fill={theme.yellow} />}
               />
             </div>

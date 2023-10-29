@@ -1,9 +1,10 @@
+import { ITheme } from '@/styles/theme';
 import { ReactNode } from 'react';
 
 export interface IBadgePropsLayout {
-  issmall?: boolean;
-  color: string;
-  bgColor?: string;
+  size?: 'small' | 'big';
+  color: ITheme;
+  bgColor?: ITheme;
 }
 
 export interface IBadgeProps extends IBadgePropsLayout {
