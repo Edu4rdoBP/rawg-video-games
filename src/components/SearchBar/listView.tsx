@@ -33,6 +33,7 @@ const SearchBarResult = ({ games, t }: IProps) => {
         <Image
           loader={() => item.background_image || ''}
           src={item.background_image || ''}
+          unoptimized={true}
           width={20}
           height={20}
           alt={t('altImage')}
