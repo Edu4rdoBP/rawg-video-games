@@ -9,6 +9,8 @@ interface IProps extends ITranslateProps {
   games: IGameInfo[] | undefined;
   loading: boolean;
 }
+
+//Renders the options generated when accessing the searchBar
 export function ListView({ games, loading, t }: IProps) {
   return (
     <S.ListViewWrapper>
@@ -16,30 +18,29 @@ export function ListView({ games, loading, t }: IProps) {
         {loading ? (
           <Skeleton />
         ) : (
-          <SearchBarResult games={games} loading={loading} t={t} />
+          <SearchBarResult games={games} t={t} loading={loading} />
         )}
       </div>
     </S.ListViewWrapper>
   );
 }
 
-function SearchBarResult({ games, t }: IProps) {
+//Displays data to the user
+const SearchBarResult = ({ games, t }: IProps) => {
   return games && games.length > 0 ? (
-    games?.map((item) => {
-      return (
-        <div key={`item-card-${item.id}`} className='game-list-item'>
-          <Image
-            loader={() => item.background_image || ``}
-            src={item.background_image || ``}
-            width={20}
-            height={20}
-            alt={t('altImage')}
-          />
-          <Link href={`/games/${item.id}`}>{item.name}</Link>
-        </div>
-      );
-    })
+    games.map((item) => (
+      <div key={`item-card-${item.id}`} className='game-list-item'>
+        <Image
+          loader={() => item.background_image || ''}
+          src={item.background_image || ''}
+          width={20}
+          height={20}
+          alt={t('altImage')}
+        />
+        <Link href={`/games/${item.id}`}>{item.name}</Link>
+      </div>
+    ))
   ) : (
     <p>{t('noGameFound')}</p>
   );
-}
+};
