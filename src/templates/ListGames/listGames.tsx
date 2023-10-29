@@ -11,7 +11,7 @@ export function ListGames() {
         return (
           <GameCard
             id={item.id}
-            backgroundImage={item.background_image}
+            backgroundimage={item.background_image}
             genres={item.genres}
             metacritic={item.metacritic}
             name={item.name}

@@ -19,18 +19,18 @@ export function DetailedGameCard({ id }: IDetailedGameCardProps) {
   }, [fetchGameById, gameDetail, id, loading]);
 
   return gameDetail ? (
-    <S.Wrapper>
+    <div>
       <div className='w-60 mb-[25px]'>
         <Tag color='blur'>Jogo em destaque</Tag>
       </div>
       <S.Card>
-        <S.BackgroundImage backgroundImage={gameDetail.background_image} />
+        <S.BackgroundImage backgroundimage={gameDetail.background_image} />
         <S.Content>
           <h2 className='font-large'>{gameDetail.name}</h2>
           <InfoGame game={gameDetail} />
         </S.Content>
       </S.Card>
-    </S.Wrapper>
+    </div>
   ) : (
     <Skeleton type='detailedCard' />
   );

@@ -13,7 +13,7 @@ export function Genres({ data }: IGenresProps) {
           <Badge
             label={item.name}
             color='primary'
-            isSmall={true}
+            issmall={true}
             key={`badger-${item.name}`}
           />
         );

@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
 interface IBackgroundImage {
-  backgroundImage?: string;
+  backgroundimage?: string;
 }
 
-export const Wrapper = styled.div`
-  margin: 70px 0;
-`;
+export const Wrapper = styled.div``;
 
 export const Card = styled.div(
   ({ theme }) => `
@@ -30,8 +28,8 @@ export const Card = styled.div(
 );
 
 export const BackgroundImage = styled.div<IBackgroundImage>(
-  ({ backgroundImage }) => `
-  background-image: url('${backgroundImage}');
+  ({ backgroundimage }) => `
+  background-image: url('${backgroundimage}');
   background-repeat: no-repeat;
   background-size: 155%;
   background-position: center;

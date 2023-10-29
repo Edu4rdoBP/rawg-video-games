@@ -11,16 +11,18 @@ import Link from 'next/link';
 
 interface InfoGameProps {
   game: IGameDetails;
+  detailed: boolean;
 }
 
-export function InfoGame({ game }: InfoGameProps) {
+export function InfoGame({ game, detailed }: InfoGameProps) {
   const theme = useTheme();
   const t = useTranslations('Games');
   return (
     <S.Wrapper>
-      <S.Description className='font-moderate'>
-        {game.description}
-      </S.Description>
+      <S.Description
+        dangerouslySetInnerHTML={{ __html: game.description }}
+        className='font-moderate'
+      />
       <S.InfoData>
         <div className='uppercase mb-2'>
           {t('info.release', { date: game.released })}
@@ -30,16 +32,18 @@ export function InfoGame({ game }: InfoGameProps) {
       </S.InfoData>
       <S.Statistics>
         <Genres data={game.genres}></Genres>
-        <Badge
-          label={String(game.metacritic)}
-          isSmall={true}
-          color='white'
-          icon={<AiFillStar fill={theme.yellow} />}
-        />
+        {!detailed && (
+          <Badge
+            label={String(game.metacritic)}
+            issmall={true}
+            color='white'
+            icon={<AiFillStar fill={theme.yellow} />}
+          />
+        )}
       </S.Statistics>
       <S.Media>
         <Platforms t={t} data={game.platforms} />
-        <Link href={`/games/${game.id}`}>{t('seeMore')}</Link>
+        {!detailed && <Link href={`/games/${game.id}`}>{t('seeMore')}</Link>}
       </S.Media>
     </S.Wrapper>
   );

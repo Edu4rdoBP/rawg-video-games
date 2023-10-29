@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const GameCard = styled.div`
-  flex: 1 0 20%;
+  flex: 1 0 25%;
   box-sizing: border-box;
   display: flex;
-  max-width: 300px;
+  max-width: 330px;
   justify-content: space-between;
   flex-direction: column;
   border-radius: var(--border-radius);
@@ -47,7 +47,7 @@ export const Media = styled.div(
   display: flex;
   align-items: center;
   justify-content: space-between;
-  a {
+  span {
     text-decoration: underline;
     color: ${theme.textMuted};
     &:hover {

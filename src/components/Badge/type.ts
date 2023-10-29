@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export interface IBadgePropsLayout {
-  isSmall?: boolean;
+  issmall?: boolean;
   color: string;
   bgColor?: string;
 }
