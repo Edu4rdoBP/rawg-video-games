@@ -14,7 +14,6 @@ export const useFindGames = (): {
   const [error, setError] = useState<Error | null>(null);
 
   const service: GameService = new GameService();
-  const rootStyles = document.documentElement.style;
 
   const fetchGameById = async (id: number): Promise<void> => {
     setLoading(true);
@@ -25,7 +24,10 @@ export const useFindGames = (): {
         ? response.background_image
         : 'url(../../public/img/background2.jpg)';
 
-      rootStyles.setProperty('--background-image', `url(${backgroundimage})`);
+      if (typeof window !== 'undefined') {
+        const rootStyles = document.documentElement.style;
+        rootStyles.setProperty('--background-image', `url(${backgroundimage})`);
+      }
 
       setGameDetail(response);
     } catch (error) {
