@@ -14,10 +14,10 @@ interface IPaginationProps {
 
 export function Pagination({ games, fetchGame, children }: IPaginationProps) {
   const [currentPage, setCurrentPage] = useState<number>(0);
-  const selectValues = [8, 16, 32, 64];
+  const selectValues = [8, 16, 32, 60];
   const [itemsPerPage, setItemsPerPage] = useState<number>(selectValues[0]);
   const t = useTranslations();
-  const count = games?.[0]?.count || 0;
+  const count = games?.[0]?.count;
 
   const handlePageClick = useCallback(
     (data: { selected: number }) => {
@@ -35,10 +35,11 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
   // const startIndex = currentPage * itemsPerPage;
   // const endIndex = startIndex + itemsPerPage;
   // const displayedNames = games?.slice(startIndex, endIndex);
-  const pageCount = Math.ceil(count / itemsPerPage)
+  console.log(count);
+  const pageCount = count ? Math.ceil(count / itemsPerPage) - 1 : 1;
 
   return (
-    <>
+    <div>
       <S.MenuPaginate>
         <Tag>{t('Games.title')}</Tag>
         <select
@@ -57,12 +58,12 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
         </select>
       </S.MenuPaginate>
       <S.Content>
-        <div className='flex flex-wrap gap-[20px] justify-center'>
+        <div className='flex flex-wrap gap-[20px] justify-between'>
           {children}
         </div>
         <S.ReactPaginate className='font-big'>
           <ReactPaginate
-            pageCount={pageCount - 1}
+            pageCount={pageCount}
             pageRangeDisplayed={5}
             marginPagesDisplayed={1}
             previousLabel={'Anterior'}
@@ -75,6 +76,6 @@ export function Pagination({ games, fetchGame, children }: IPaginationProps) {
           />
         </S.ReactPaginate>
       </S.Content>
-    </>
+    </div>
   );
 }

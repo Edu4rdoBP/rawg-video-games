@@ -1,7 +1,7 @@
 :root {
   --font-size: 16px;
   --border-radius: 10px;
-  --background-image: url('../../public/img/background.png');
+  --background-image: url('');
 }
 
 @tailwind base;
@@ -19,7 +19,7 @@ body {
   background-color: black;
   background-image: var(--background-image);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 130%;
   background-position: top center;
   padding: 50px 0;
 }
