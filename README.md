@@ -1,3 +1,47 @@
+
+<div>
+  <h1 align="center"> 
+    <img alt="Get Over Here Logo" src="./public/img/white-logo.svg">
+  </h1>
+  <h2 align="center"> 
+    Get Over Here
+  </h2>
+  <h3 align="center"> 
+    Project developed to improve knowledge with Next 13.
+  </h3>
+
+  <p align="center">
+    <img alt="Made by Eduardo" src="https://img.shields.io/badge/made%20by-Eduardo-blueviolet?style=plastic">
+    <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/Edu4rdoBP/rawg-video-games?color=blue&style=plastic">
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Edu4rdoBP/rawg-video-games?style=plastic"/>
+    <a href="https://opensource.org/licenses/MIT">
+      <img alt="Logo MIT" src="https://img.shields.io/badge/license-MIT-brightgreen?style=plastic">
+    </a>
+  </p>
+</div>
+
+## About The Project
+
+This project is a web application developed with Next.js and TypeScript, aiming to provide users with an immersive experience with information about 2023's most popular games. The interface is intuitive and accessible, with updates from trusted sources of API.
+
+## Features
+
+- Web application
+    - List of games on the server and information about game DLCs
+    - Accessibility for users
+    - Implementation of file translation
+    - Search for specific games in a SearchBar
+ 
+## Technologies
+
+-   **[React](https://reactjs.org/)**
+    - [TypeScript](https://www.typescriptlang.org/)
+    - [Next](https://nextjs.org/)
+    - [Styled Component](https://styled-components.com/) 
+    - [Tailwind CSS](https://tailwindcss.com/)
+    - [Axios](https://axios-http.com/)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
