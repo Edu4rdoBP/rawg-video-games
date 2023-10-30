@@ -15,4 +15,8 @@ export default {
   ],
 } as Meta;
 
-export const DefaultLogo: StoryObj = {};
+export const DefaultLogo: StoryObj<typeof Logo> = {};
+
+DefaultLogo.args = {
+  color: '#000000',
+};

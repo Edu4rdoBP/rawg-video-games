@@ -1,11 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Tag } from '.';
+import { Badge } from '.';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from '../../styles/theme';
+import { IBadgeProps } from './type';
 
 export default {
-  title: 'Components/Tag',
-  component: Tag,
+  title: 'Components/Badge',
+  component: Badge,
   parameters: {
     layout: 'centered',
   },
@@ -15,9 +16,11 @@ export default {
   ],
 } as Meta;
 
-export const DefaultTag: StoryObj<typeof Tag> = {};
+export const DefaultBadge: StoryObj<typeof Badge> = {};
 
-DefaultTag.args = {
-  color: 'spaceGray',
-  children: 'Screenshots',
+DefaultBadge.args = {
+  bgcolor: 'primary',
+  color: 'white',
+  size: 'big',
+  label: 'Badge',
 };

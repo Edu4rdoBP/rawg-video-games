@@ -45,8 +45,8 @@ export function DetailedGameInfo({ id }: IDetailedGameInfo) {
               <h1 className='font-xlarge m-0'>{gameDetail.name}</h1>
               <Badge
                 label={String(gameDetail.metacritic)}
-                color={theme.white}
-                bgcolor={theme.blur}
+                color={'white'}
+                bgcolor={'blur'}
                 icon={<AiFillStar fill={theme.yellow} />}
               />
             </div>
