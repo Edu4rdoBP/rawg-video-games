@@ -64,12 +64,26 @@ cd rawg-video-games
 ## To install dependencies in server
 npm install or yarn install
 
+##
+Register to Get an API key on the https://rawg.io/apidocs
+
 ## Add your API key to the .env file located in the project root: '/.env'
-NEXT_PUBLIC_API_KEY=adicione sua chave aqui
+NEXT_PUBLIC_API_KEY=add your key genereted key
 
 ## Run the Server
 npm run dev
 ```
+
+## Get an API key
+
+<div align="left">
+  <p>
+    <a href="https://rawg.io/apidocs">
+      RAWG API docs page
+    </a>
+  </p>
+</div>
+
 ## License
 
 This project is under the MIT license. See the [LICENSE](/LICENSE) file for more details.
