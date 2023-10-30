@@ -1,5 +1,4 @@
 'use client';
-import { IGenres, IPlatformByGame } from '@/@types/games';
 import Link from 'next/link';
 import * as S from './style';
 import Image from 'next/image';
@@ -9,16 +8,7 @@ import { AiFillStar } from 'react-icons/ai';
 import { useTheme } from 'styled-components';
 import { Genres } from '../../components/Genres';
 import { Platforms } from '../../components/Platforms';
-
-interface IGameCard {
-  id: number;
-  name: string;
-  backgroundimage?: string;
-  genres: IGenres[];
-  platforms?: IPlatformByGame[];
-  metacritic: number;
-  route?: string;
-}
+import { IGameCard } from './types';
 
 //Game Card Layout
 export function GameCard({
@@ -52,7 +42,7 @@ export function GameCard({
               <Badge
                 label={String(metacritic)}
                 size={'small'}
-                color={theme.white}
+                color={'white'}
                 icon={<AiFillStar fill={theme.yellow} />}
               />
             </div>
