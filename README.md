@@ -41,6 +41,9 @@ This project is a web application developed with Next.js and TypeScript, aiming 
     - [Tailwind CSS](https://tailwindcss.com/)
     - [Axios](https://axios-http.com/)
  
+## Vercel link
+  - Access the application through this link: https://rawg-video-games.vercel.app/
+ 
 ## Layout
 ### Web
 
