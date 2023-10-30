@@ -68,7 +68,7 @@ npm install or yarn install
 Register to Get an API key on the https://rawg.io/apidocs
 
 ## Add your API key to the .env file located in the project root: '/.env'
-NEXT_PUBLIC_API_KEY=add your key genereted key
+NEXT_PUBLIC_API_KEY={add your generated key}
 
 ## Run the Server
 npm run dev
