@@ -5,8 +5,6 @@ export interface IButtonPropsLayout {
 }
 
 export interface IButtonProps extends IButtonPropsLayout {
-  label?: string;
-  icon?: ReactNode;
   children?: ReactNode;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }

@@ -24,7 +24,7 @@ export const useFindGames = (): {
       const rootStyles = document.documentElement.style;
       rootStyles.setProperty('--background-image', `url(${backgroundimage})`);
     }
-  }
+  };
 
   const fetchGameById = async (id: number): Promise<void> => {
     setLoading(true);
