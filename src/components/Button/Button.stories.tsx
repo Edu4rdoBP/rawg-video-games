@@ -7,6 +7,10 @@ import { IButtonProps } from './type';
 export default {
   title: 'Components/Button',
   component: Button,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
   decorators: [
     (Story) => <ThemeProvider theme={defaultTheme}>{Story()}</ThemeProvider>,
   ],

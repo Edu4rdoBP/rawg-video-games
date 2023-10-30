@@ -6,6 +6,10 @@ import { defaultTheme } from '../../styles/theme';
 export default {
   title: 'Components/Logo',
   component: Logo,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
   decorators: [
     (Story) => <ThemeProvider theme={defaultTheme}>{Story()}</ThemeProvider>,
   ],
