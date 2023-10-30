@@ -15,19 +15,24 @@ export const useFindGames = (): {
 
   const service: GameService = new GameService();
 
+  const setBackgroundImage = (response: IGameDetails) => {
+    const backgroundimage = response.background_image
+      ? response.background_image
+      : 'url(../../public/img/background2.jpg)';
+
+    if (typeof window !== 'undefined') {
+      const rootStyles = document.documentElement.style;
+      rootStyles.setProperty('--background-image', `url(${backgroundimage})`);
+    }
+  }
+
   const fetchGameById = async (id: number): Promise<void> => {
     setLoading(true);
     try {
       const response = await service.fetchGameById(id);
 
-      const backgroundimage = response.background_image
-        ? response.background_image
-        : 'url(../../public/img/background2.jpg)';
-
-      if (typeof window !== 'undefined') {
-        const rootStyles = document.documentElement.style;
-        rootStyles.setProperty('--background-image', `url(${backgroundimage})`);
-      }
+      //this method change background image after request
+      setBackgroundImage(response);
 
       setGameDetail(response);
     } catch (error) {
