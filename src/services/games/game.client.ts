@@ -18,7 +18,6 @@ export class GameClient {
     const response = await axiosClient.get(`/api/games`, {
       params: {
         dates: `2023-01-01,${DateFormatter.getFullDate()}`,
-        ordering: '-rating',
         ...input,
       },
     });
