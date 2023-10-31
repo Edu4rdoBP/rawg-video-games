@@ -59,7 +59,7 @@ This project is a web application developed with Next.js and TypeScript, aiming 
 # You can use npm or yarn to manage packages
 
 ## Clone the repository
-git clone git@github.com:Edu4rdoBP/rawg-video-games.git
+git clone https://github.com/Edu4rdoBP/rawg-video-games.git
 
 ## Access the project folder in the terminal
 cd rawg-video-games
@@ -70,11 +70,15 @@ npm install or yarn install
 ##
 Register to Get an API key on the https://rawg.io/apidocs
 
-## Add your API key to the .env file located in the project root: '/.env'
+## Add your API key to the .env.local file located in the project root: '/.env.local'
 NEXT_PUBLIC_API_KEY={add your generated key}
 
 ## Run the Server
 npm run dev
+
+
+## Run the Server
+npm run storybook
 ```
 
 ## Get an API key
