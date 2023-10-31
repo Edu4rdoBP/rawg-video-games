@@ -1,4 +1,4 @@
-import { DateFormatter } from '@/utils/dateFormatter';
+import { DateFormatter } from '../../utils/dateFormatter';
 import {
   IGameDetailedInfoResponse,
   IGeneralInfo,

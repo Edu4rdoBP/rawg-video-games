@@ -1,4 +1,4 @@
-import { DateFormatter } from '@/utils/dateFormatter';
+import { DateFormatter } from '../../utils/dateFormatter';
 import axiosClient from '../api';
 import {
   IGameDetailedInfoResponse,

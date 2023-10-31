@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { IGameInfo, IGameInput } from '@/@types/games';
-import { GameService } from '@/services/games/game.service';
+import { GameService } from '../services/games/game.service';
 
 export const useGameList = (): {
   gameList: IGameInfo[] | undefined;

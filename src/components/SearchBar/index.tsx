@@ -2,7 +2,7 @@
 
 import * as S from './style';
 import { useRef, useState } from 'react';
-import { useGameList } from '@/hooks/useGameList';
+import { useGameList } from '../../hooks/useGameList';
 import { ListView } from './listView';
 import { useTranslations } from 'next-intl';
 

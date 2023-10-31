@@ -51,21 +51,21 @@ export interface IGameInfo {
 }
 
 export interface IGenres {
-  id: number;
+  id?: number;
   name: string;
-  slug: string;
-  games_count: number;
-  image_background: string;
+  slug?: string;
+  games_count?: number;
+  image_background?: string;
 }
 
 export interface IPlatformByGame {
   platform: {
-    id: number;
+    id?: number;
     slug: string;
-    name: string;
+    name?: string;
   };
-  released_at: string;
-  requirements: IRequirements;
+  released_at?: string;
+  requirements?: IRequirements;
 }
 
 export interface IScreenshot {
