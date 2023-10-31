@@ -29,17 +29,19 @@ export function ListView({ games, loading, t }: IProps) {
 const SearchBarResult = ({ games, t }: IProps) => {
   return games && games.length > 0 ? (
     games.map((item) => (
-      <div key={`item-card-${item.id}`} className='game-list-item'>
-        <Image
-          loader={() => item.background_image || ''}
-          src={item.background_image || ''}
-          unoptimized={true}
-          width={20}
-          height={20}
-          alt={t('altImage')}
-        />
-        <Link href={`/games/${item.id}`}>{item.name}</Link>
-      </div>
+      <Link href={`/games/${item.id}`} key={`item-card-${item.id}`}>
+        <div className='game-list-item'>
+          <Image
+            loader={() => item.background_image || ''}
+            src={item.background_image || ''}
+            unoptimized={true}
+            width={20}
+            height={20}
+            alt={t('altImage')}
+          />
+          {item.name}
+        </div>
+      </Link>
     ))
   ) : (
     <p>{t('noGameFound')}</p>
