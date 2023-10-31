@@ -51,7 +51,7 @@ export function SearchBar() {
             setTimeout(async () => {
               setQuery('');
               setFocus(false);
-            }, 150);
+            }, 300);
           }}
         />
       </S.Form>
